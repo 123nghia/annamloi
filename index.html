@@ -33,7 +33,6 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-snap-type: y proximity;
     }
 
     body {
@@ -320,15 +319,26 @@
     }
 
     .section {
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       align-items: center;
-      padding: 96px 0;
-      scroll-snap-align: start;
+      padding: 72px 0;
     }
 
     .section.alt {
       background: #eef5ef;
+    }
+
+    #investor {
+      padding: 24px 0 52px;
+    }
+
+    #projects {
+      padding-bottom: 36px;
+    }
+
+    #process {
+      padding-top: 60px;
     }
 
     .wrap {
@@ -593,11 +603,11 @@
       pointer-events: none;
     }
 
-    .deal-media.factory-2 {
+    .deal-media.factory-2 img {
       object-position: 62% 40%;
     }
 
-    .deal-media.factory-3 {
+    .deal-media.factory-3 img {
       object-position: 42% 56%;
     }
 
@@ -1488,6 +1498,7 @@
         <div class="deal-grid">
           <article class="deal-card" data-status="open">
             <div class="deal-media factory-1">
+              <img src="image.jpg" alt="Nhà máy may Tân Phú">
               <div class="status open">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                 Đang mở
@@ -1519,6 +1530,7 @@
 
           <article class="deal-card" data-status="open">
             <div class="deal-media factory-2">
+              <img src="image.jpg" alt="Kho lạnh Sóng Thần">
               <div class="status open">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                 Đang mở
@@ -1550,6 +1562,7 @@
 
           <article class="deal-card" data-status="closed">
             <div class="deal-media factory-3">
+              <img src="image.jpg" alt="Xưởng cơ khí Long Thành">
               <div class="status closed">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0v3M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                 Đã đóng
