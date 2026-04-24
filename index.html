@@ -3,8 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CÔNG TY TNHH AN NAM LỢI - Thuê điện mặt trời cho nhà xưởng</title>
-  <meta name="description" content="Landing page giới thiệu mô hình thuê điện mặt trời cho nhà xưởng và đăng ký đầu tư theo từng deal.">
+  <title>An Nam Lợi | Thuê điện mặt trời mái nhà xưởng và deal đầu tư dự án</title>
+  <meta name="description" content="An Nam Lợi giới thiệu mô hình thuê điện mặt trời mái nhà xưởng, tham gia đầu tư theo từng dự án và chương trình cộng tác giới thiệu nhà xưởng.">
+  <meta name="keywords" content="An Nam Lợi, điện mặt trời mái nhà, thuê điện mặt trời, đầu tư điện mặt trời, rooftop solar, nhà xưởng">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An Nam Lợi | Thuê điện mặt trời mái nhà xưởng">
+  <meta property="og:description" content="Deal thuê điện mặt trời cho nhà xưởng, tham gia đầu tư theo từng dự án và kênh referral cho sales/đối tác.">
+  <meta property="og:image" content="image.jpg">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="An Nam Lợi | Thuê điện mặt trời mái nhà xưởng">
+  <meta name="twitter:description" content="Landing page giới thiệu mô hình thuê điện mặt trời, hồ sơ deal và đăng ký khảo sát nhà xưởng.">
+  <meta name="twitter:image" content="image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,19 +34,13 @@
       --sky: #1677c8;
       --sky-soft: #e8f3fb;
       --clay: #a65b3a;
-      --closed: #778292;
+      --risk: #fff4df;
       --shadow: 0 24px 60px rgba(23, 32, 51, 0.12);
       --radius: 8px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: var(--paper);
@@ -43,155 +49,109 @@
       font-size: 16px;
       line-height: 1.55;
     }
-
-    img,
-    svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    select {
-      font: inherit;
-    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
 
     .site-header {
       position: fixed;
       inset: 0 0 auto;
       z-index: 50;
       border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-      background: rgba(23, 32, 51, 0.62);
+      background: rgba(23, 32, 51, 0.72);
       color: #ffffff;
       backdrop-filter: blur(18px);
     }
 
     .nav {
       width: min(1180px, calc(100% - 32px));
-      min-height: 86px;
+      min-height: 84px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: 0;
-      white-space: nowrap;
+      gap: 18px;
     }
 
     .brand-logo-wrap {
       width: 96px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 68px;
+      display: grid;
+      place-items: center;
       padding: 5px 8px;
       border-radius: 8px;
       background: #ffffff;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
     }
 
-    .brand-logo {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
+    .brand-logo { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 4px; padding: 0; margin: 0; list-style: none; }
     .nav-links a {
+      min-height: 40px;
       display: inline-flex;
       align-items: center;
-      min-height: 40px;
-      padding: 0 12px;
+      padding: 0 10px;
       border-radius: 8px;
       color: rgba(255, 255, 255, 0.84);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
     }
+    .nav-links a:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
 
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-    }
-
-    .nav-cta {
-      min-height: 40px;
+    .button, .nav-cta {
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 0 14px;
+      gap: 10px;
+      padding: 0 18px;
+      border: 0;
       border-radius: 8px;
-      background: var(--solar);
-      color: #211706;
+      cursor: pointer;
       font-weight: 800;
-      box-shadow: 0 12px 28px rgba(243, 173, 34, 0.32);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
       white-space: nowrap;
     }
+    .button:hover, .nav-cta:hover { transform: translateY(-1px); }
+    .button-primary, .nav-cta {
+      background: var(--solar);
+      color: #211706;
+      box-shadow: 0 18px 36px rgba(243, 173, 34, 0.3);
+    }
+    .button-primary:hover, .nav-cta:hover { background: #ffc04a; }
+    .button-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      backdrop-filter: blur(12px);
+    }
+    .button-light {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.08);
+    }
+    .button-green { background: var(--leaf); color: #ffffff; box-shadow: 0 16px 34px rgba(25, 135, 84, 0.24); }
+    .button-small { min-height: 42px; padding-inline: 14px; font-size: 14px; }
 
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
-      isolation: isolate;
       overflow: hidden;
-      background:
-        linear-gradient(120deg, #111827 0%, #172033 52%, #3e4754 100%);
+      background: linear-gradient(120deg, #111827 0%, #172033 52%, #3e4754 100%);
       color: #ffffff;
-      scroll-snap-align: start;
     }
 
     .hero-inner {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 130px 0 58px;
+      padding: 130px 0 54px;
       display: grid;
-      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      gap: 46px;
       align-items: center;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-visual {
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 8px;
-      background: #ffffff;
-      box-shadow: 0 34px 70px rgba(0, 0, 0, 0.34);
-    }
-
-    .hero-visual img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
     }
 
     .eyebrow {
@@ -209,91 +169,42 @@
       backdrop-filter: blur(12px);
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
+    h1, h2, h3, p { margin-top: 0; }
     h1 {
-      max-width: 620px;
+      max-width: 640px;
       margin: 22px 0 18px;
-      font-size: clamp(42px, 5.8vw, 74px);
+      font-size: clamp(40px, 5.6vw, 72px);
       line-height: 1.04;
       letter-spacing: 0;
       font-weight: 800;
     }
+    h2 {
+      max-width: 760px;
+      margin-bottom: 0;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+    h3 { line-height: 1.28; }
 
     .hero-copy {
-      max-width: 560px;
-      margin-bottom: 30px;
+      max-width: 590px;
+      margin-bottom: 26px;
       color: rgba(255, 255, 255, 0.86);
-      font-size: clamp(17px, 1.65vw, 20px);
+      font-size: clamp(17px, 1.55vw, 20px);
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 42px;
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 18px;
-      border: 0;
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+    .hero-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 8px;
-      cursor: pointer;
-      font-weight: 800;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-    }
-
-    .button-primary {
-      background: var(--solar);
-      color: #211706;
-      box-shadow: 0 18px 36px rgba(243, 173, 34, 0.3);
-    }
-
-    .button-primary:hover {
-      background: #ffc04a;
-    }
-
-    .button-ghost {
-      border: 1px solid rgba(255, 255, 255, 0.26);
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      backdrop-filter: blur(12px);
-    }
-
-    .button-light {
-      border: 1px solid var(--line);
       background: #ffffff;
-      color: var(--ink);
-      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.08);
+      box-shadow: 0 34px 70px rgba(0, 0, 0, 0.34);
     }
+    .hero-visual img { width: 100%; height: auto; object-fit: contain; }
 
-    .button-small {
-      min-height: 42px;
-      padding-inline: 14px;
-      font-size: 14px;
-    }
-
-    .quick-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 1fr));
-      gap: 12px;
-      max-width: 620px;
-    }
-
+    .quick-stats { display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); gap: 12px; max-width: 660px; }
     .stat {
       min-height: 104px;
       padding: 16px;
@@ -302,50 +213,12 @@
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(14px);
     }
+    .stat-value { display: block; margin-bottom: 6px; color: #ffffff; font-size: 24px; font-weight: 800; line-height: 1.1; }
+    .stat-label { color: rgba(255, 255, 255, 0.74); font-size: 13px; font-weight: 600; }
 
-    .stat-value {
-      display: block;
-      margin-bottom: 6px;
-      color: #ffffff;
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.1;
-    }
-
-    .stat-label {
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .section {
-      min-height: auto;
-      display: flex;
-      align-items: center;
-      padding: 72px 0;
-    }
-
-    .section.alt {
-      background: #eef5ef;
-    }
-
-    #investor {
-      padding: 24px 0 52px;
-    }
-
-    #projects {
-      padding-bottom: 36px;
-    }
-
-    #process {
-      padding-top: 60px;
-    }
-
-    .wrap {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
+    .section { padding: 72px 0; }
+    .section.alt { background: #eef5ef; }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
     .section-head {
       display: flex;
       align-items: end;
@@ -353,54 +226,28 @@
       gap: 28px;
       margin-bottom: 34px;
     }
+    .section-kicker { margin-bottom: 10px; color: var(--solar-strong); font-size: 13px; font-weight: 800; text-transform: uppercase; }
+    .section-desc { max-width: 540px; margin-bottom: 0; color: var(--muted); font-weight: 500; }
 
-    .section-kicker {
-      margin-bottom: 10px;
-      color: var(--solar-strong);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
+    .notice {
+      border-top: 1px solid #f5dba8;
+      border-bottom: 1px solid #f5dba8;
+      background: #fff8ea;
+      padding: 22px 0;
     }
+    .notice-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    .notice strong { display: block; margin-bottom: 6px; color: #7c4a05; }
+    .notice p { margin: 0; color: #6f5c37; font-weight: 600; }
 
-    h2 {
-      max-width: 720px;
-      margin-bottom: 0;
-      font-size: clamp(30px, 4vw, 50px);
-      line-height: 1.12;
-      letter-spacing: 0;
-      font-weight: 800;
-    }
-
-    .section-desc {
-      max-width: 520px;
-      margin-bottom: 0;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr 1.05fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .flow-panel {
-      min-height: 280px;
-      padding: 26px;
+    .journey-grid, .trust-grid, .deal-grid, .faq-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card, .deal-card, .faq-item {
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--surface);
-      box-shadow: 0 18px 42px rgba(23, 32, 51, 0.07);
+      box-shadow: 0 16px 38px rgba(23, 32, 51, 0.07);
     }
-
-    .flow-panel.dark {
-      background: var(--ink);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .flow-icon {
+    .card { min-height: 310px; padding: 24px; display: flex; flex-direction: column; }
+    .icon-box {
       width: 46px;
       height: 46px;
       display: grid;
@@ -410,127 +257,34 @@
       background: var(--leaf-soft);
       color: var(--leaf);
     }
-
-    .flow-panel.dark .flow-icon {
-      background: rgba(255, 255, 255, 0.12);
-      color: var(--solar);
-    }
-
-    .flow-panel h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-      line-height: 1.25;
-    }
-
-    .flow-panel p {
-      margin-bottom: 20px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .flow-panel.dark p {
-      color: rgba(255, 255, 255, 0.74);
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .mini-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .flow-panel.dark .mini-list li {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
+    .card h3 { margin-bottom: 10px; font-size: 22px; }
+    .card p { color: var(--muted); font-weight: 500; }
+    .mini-list { display: grid; gap: 10px; padding: 0; margin: 0 0 22px; list-style: none; }
+    .mini-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); font-size: 14px; font-weight: 650; }
     .check {
       width: 19px;
       height: 19px;
       flex: 0 0 19px;
       display: grid;
       place-items: center;
-      margin-top: 1px;
+      margin-top: 2px;
       border-radius: 50%;
       background: var(--leaf);
       color: #ffffff;
-    }
-
-    .arrow-rail {
-      position: relative;
-      display: grid;
-      place-items: center;
-      min-height: 280px;
-      border-radius: var(--radius);
-      background:
-        linear-gradient(180deg, rgba(243, 173, 34, 0.18), rgba(22, 119, 200, 0.16)),
-        #ffffff;
-      border: 1px solid var(--line);
-      overflow: hidden;
-    }
-
-    .arrow-rail::before {
-      content: "";
-      position: absolute;
-      inset: 26px 50%;
-      width: 2px;
-      transform: translateX(-50%);
-      background: linear-gradient(var(--leaf), var(--solar), var(--sky));
-      opacity: 0.42;
-    }
-
-    .route {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      gap: 16px;
-      width: min(260px, calc(100% - 44px));
-    }
-
-    .route-step {
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #ffffff;
-      box-shadow: 0 12px 28px rgba(23, 32, 51, 0.08);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .route-step span {
-      width: 30px;
-      height: 30px;
-      flex: 0 0 30px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--ink);
-      color: #ffffff;
       font-size: 13px;
     }
+    .card .button { margin-top: auto; width: 100%; }
 
-    .deal-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 22px;
-    }
+    .trust-card { padding: 22px; }
+    .trust-card h3 { margin-bottom: 14px; font-size: 21px; }
+    .data-list { display: grid; gap: 10px; margin: 0; }
+    .data-list div { display: grid; grid-template-columns: 150px 1fr; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid #edf2ee; }
+    .data-list dt { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .data-list dd { margin: 0; font-weight: 700; }
+    .doc-list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+    .doc-list li { display: flex; gap: 10px; color: var(--muted); font-weight: 650; }
 
+    .deal-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
     .segmented {
       display: inline-grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -540,14 +294,8 @@
       border-radius: 8px;
       background: #ffffff;
     }
-
     .segmented button {
       min-height: 38px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 0 12px;
       border: 0;
       border-radius: 6px;
       background: transparent;
@@ -556,61 +304,12 @@
       font-size: 14px;
       font-weight: 800;
     }
+    .segmented button.is-active { background: var(--ink); color: #ffffff; }
 
-    .segmented button.is-active {
-      background: var(--ink);
-      color: #ffffff;
-    }
-
-    .deal-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .deal-card {
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      min-height: 498px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #ffffff;
-      box-shadow: 0 16px 38px rgba(23, 32, 51, 0.08);
-    }
-
-    .deal-media {
-      position: relative;
-      min-height: 190px;
-      overflow: hidden;
-      background: #eef2f0;
-      isolation: isolate;
-    }
-
-    .deal-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 190px;
-      object-fit: cover;
-    }
-
-    .deal-media::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.46));
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .deal-media.factory-2 img {
-      object-position: 62% 40%;
-    }
-
-    .deal-media.factory-3 img {
-      object-position: 42% 56%;
-    }
-
+    .deal-card { display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; min-height: 520px; }
+    .deal-media { position: relative; min-height: 190px; overflow: hidden; background: #eef2f0; }
+    .deal-media img { width: 100%; height: 100%; min-height: 190px; object-fit: cover; }
+    .deal-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.46)); }
     .status {
       position: absolute;
       top: 14px;
@@ -619,23 +318,15 @@
       min-height: 34px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 0 11px;
       border-radius: 999px;
       color: #ffffff;
       font-size: 13px;
       font-weight: 800;
+      background: var(--leaf);
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
     }
-
-    .status.open {
-      background: var(--leaf);
-    }
-
-    .status.closed {
-      background: var(--closed);
-    }
-
+    .status.demo { background: var(--clay); }
     .deal-progress {
       position: absolute;
       left: 14px;
@@ -647,222 +338,43 @@
       background: rgba(255, 255, 255, 0.94);
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
     }
+    .progress-meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; color: var(--ink); font-size: 12px; font-weight: 800; }
+    .bar { height: 8px; overflow: hidden; border-radius: 999px; background: #e7ece8; }
+    .bar > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--leaf), var(--solar)); }
+    .deal-body { padding: 20px; }
+    .deal-body h3 { margin-bottom: 10px; font-size: 21px; }
+    .location { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 16px; color: var(--muted); font-size: 14px; font-weight: 700; }
+    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .spec { min-height: 74px; padding: 11px; border-radius: 8px; background: #f5f8f5; border: 1px solid #e4ece5; }
+    .spec-label { display: block; margin-bottom: 4px; color: var(--muted); font-size: 12px; font-weight: 700; }
+    .spec-value { color: var(--ink); font-size: 14px; font-weight: 800; }
+    .deal-note { margin: 0; color: var(--muted); font-size: 14px; font-weight: 500; }
+    .deal-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 20px; border-top: 1px solid var(--line); }
+    .slot { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .slot strong { display: block; color: var(--ink); font-size: 18px; }
 
-    .progress-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 8px;
-      color: var(--ink);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .bar {
-      height: 8px;
-      overflow: hidden;
-      border-radius: 999px;
-      background: #e7ece8;
-    }
-
-    .bar > span {
-      display: block;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--leaf), var(--solar));
-    }
-
-    .deal-body {
-      padding: 20px;
-    }
-
-    .deal-body h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
-      line-height: 1.28;
-    }
-
-    .location {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-bottom: 16px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .spec-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .spec {
-      min-height: 74px;
-      padding: 11px;
-      border-radius: 8px;
-      background: #f5f8f5;
-      border: 1px solid #e4ece5;
-    }
-
-    .spec-label {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .spec-value {
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .deal-note {
-      min-height: 54px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .deal-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 16px 20px 20px;
-      border-top: 1px solid var(--line);
-    }
-
-    .slot {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .slot strong {
-      display: block;
-      color: var(--ink);
-      font-size: 18px;
-    }
-
-    .info-band {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 24px;
-      align-items: center;
-      padding: 28px;
-      border-radius: var(--radius);
-      background: var(--ink);
-      color: #ffffff;
-      box-shadow: var(--shadow);
-    }
-
-    .info-band h3 {
-      margin-bottom: 10px;
-      font-size: 28px;
-      line-height: 1.22;
-    }
-
-    .info-band p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.74);
-      font-weight: 500;
-    }
-
-    .rules {
-      display: grid;
-      gap: 10px;
-    }
-
-    .rule {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      min-height: 54px;
-      padding: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .benefit {
-      min-height: 274px;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #ffffff;
-      box-shadow: 0 16px 38px rgba(23, 32, 51, 0.07);
-    }
-
-    .benefit .flow-icon {
-      margin-bottom: 20px;
-    }
-
-    .benefit h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    .benefit p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .calculator {
+    .risk-band {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 24px;
-      align-items: stretch;
-    }
-
-    .calc-panel,
-    .result-panel {
-      border: 1px solid var(--line);
+      align-items: center;
+      padding: 28px;
+      border: 1px solid #f3d391;
       border-radius: var(--radius);
-      background: #ffffff;
-      box-shadow: 0 16px 38px rgba(23, 32, 51, 0.07);
+      background: var(--risk);
+      box-shadow: 0 18px 42px rgba(23, 32, 51, 0.07);
     }
+    .risk-band h2 { font-size: clamp(28px, 3.6vw, 42px); }
+    .risk-band p { color: #6f5c37; font-weight: 600; }
+    .risk-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .risk-list li { display: flex; gap: 10px; color: #514027; font-weight: 700; }
 
-    .calc-panel {
-      padding: 24px;
-    }
-
-    .calc-panel h3,
-    .result-panel h3 {
-      margin-bottom: 18px;
-      font-size: 22px;
-    }
-
-    .field {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .field label {
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .field input,
-    .field select {
+    .calculator { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px; align-items: stretch; }
+    .calc-panel, .result-panel { border: 1px solid var(--line); border-radius: var(--radius); background: #ffffff; box-shadow: 0 16px 38px rgba(23, 32, 51, 0.07); }
+    .calc-panel { padding: 24px; }
+    .field, .form-field { display: grid; gap: 8px; margin-bottom: 18px; }
+    .field label, .form-field label { color: var(--ink); font-size: 14px; font-weight: 800; }
+    .field input, .field select, .form-field input, .form-field select, .form-field textarea {
       width: 100%;
       min-height: 48px;
       border: 1px solid var(--line);
@@ -873,779 +385,355 @@
       font-weight: 700;
       outline: none;
     }
-
-    .field input:focus,
-    .field select:focus {
+    .form-field textarea { min-height: 112px; padding: 12px; resize: vertical; }
+    .field input:focus, .field select:focus, .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
       border-color: var(--sky);
       box-shadow: 0 0 0 3px rgba(22, 119, 200, 0.14);
     }
+    .field-error { display: none; color: #b42318; font-size: 13px; font-weight: 700; }
+    .is-invalid input { border-color: #d92d20; }
+    .is-invalid .field-error { display: block; }
+    .range-row { display: grid; grid-template-columns: 1fr 88px; gap: 12px; align-items: center; }
+    input[type="range"] { accent-color: var(--leaf); }
+    .range-value { min-height: 40px; display: grid; place-items: center; border-radius: 8px; background: var(--leaf-soft); color: var(--leaf); font-weight: 800; }
+    .result-panel { overflow: hidden; }
+    .result-head { padding: 24px; background: var(--ink); color: #ffffff; }
+    .result-head p { margin: 0; color: rgba(255, 255, 255, 0.72); font-weight: 500; }
+    .result-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); }
+    .result-item { min-height: 122px; padding: 20px; background: #ffffff; }
+    .result-label { display: block; margin-bottom: 7px; color: var(--muted); font-size: 13px; font-weight: 700; }
+    .result-value { color: var(--ink); font-size: clamp(22px, 3vw, 32px); line-height: 1.05; font-weight: 800; }
+    .result-value.green { color: var(--leaf); }
 
-    .range-row {
-      display: grid;
-      grid-template-columns: 1fr 88px;
-      gap: 12px;
-      align-items: center;
-    }
+    .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .phase { min-height: 230px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: #ffffff; box-shadow: 0 14px 34px rgba(23, 32, 51, 0.06); }
+    .phase-num { width: 38px; height: 38px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 8px; background: var(--ink); color: #ffffff; font-size: 13px; font-weight: 800; }
+    .phase p { margin: 0; color: var(--muted); font-weight: 500; }
 
-    input[type="range"] {
-      accent-color: var(--leaf);
-    }
+    .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .faq-item { padding: 22px; }
+    .faq-item h3 { margin-bottom: 8px; font-size: 18px; }
+    .faq-item p { margin: 0; color: var(--muted); font-weight: 500; }
 
-    .range-value {
-      min-height: 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--leaf-soft);
-      color: var(--leaf);
-      font-weight: 800;
-    }
+    .cta { padding: 72px 0; background: var(--ink); color: #ffffff; }
+    .cta-inner { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 34px; align-items: start; }
+    .cta h2 { margin-bottom: 16px; }
+    .cta p { color: rgba(255, 255, 255, 0.74); font-weight: 500; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
+    .contact-box { padding: 24px; border-radius: var(--radius); background: #ffffff; color: var(--ink); box-shadow: var(--shadow); }
+    .form-intro { color: var(--muted) !important; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 14px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-note { margin-top: 12px; color: var(--muted); font-size: 13px; font-weight: 600; }
+    .form-status { min-height: 22px; margin-top: 10px; color: var(--leaf); font-size: 14px; font-weight: 800; }
 
-    .result-panel {
-      overflow: hidden;
-    }
+    .footer { padding: 34px 0 96px; background: #0f1726; color: rgba(255, 255, 255, 0.72); }
+    .footer .wrap { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: center; }
+    .footer-logo { display: grid; place-items: center; padding: 10px; border-radius: 8px; background: #ffffff; }
+    .disclaimer { font-size: 13px; font-weight: 600; }
 
-    .result-head {
-      padding: 24px;
-      background: var(--ink);
-      color: #ffffff;
-    }
-
-    .result-head h3 {
-      margin-bottom: 8px;
-    }
-
-    .result-head p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.72);
-      font-weight: 500;
-    }
-
-    .result-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--line);
-    }
-
-    .result-item {
-      min-height: 122px;
-      padding: 20px;
-      background: #ffffff;
-    }
-
-    .result-label {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .result-value {
-      color: var(--ink);
-      font-size: clamp(22px, 3vw, 32px);
-      line-height: 1.05;
-      font-weight: 800;
-    }
-
-    .result-value.green {
-      color: var(--leaf);
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .phase {
-      min-height: 230px;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #ffffff;
-      box-shadow: 0 14px 34px rgba(23, 32, 51, 0.06);
-    }
-
-    .phase-num {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      border-radius: 8px;
-      background: var(--sky-soft);
-      color: var(--sky);
-      font-weight: 800;
-    }
-
-    .phase h3 {
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
-
-    .phase p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .cta {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 96px 0;
-      background: #111827;
-      color: #ffffff;
-      scroll-snap-align: start;
-    }
-
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .cta h2 {
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      max-width: 620px;
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .contact-box {
-      padding: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-    }
-
-    .contact-box h3 {
-      margin-bottom: 8px;
-      color: #ffffff;
-      font-size: 24px;
-      line-height: 1.24;
-    }
-
-    .form-intro {
-      margin-bottom: 18px !important;
-      color: rgba(255, 255, 255, 0.72) !important;
-      font-size: 14px !important;
-    }
-
-    .lead-form {
-      display: grid;
-      gap: 14px;
-    }
-
-    .form-grid {
-      display: grid;
+    .mobile-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      display: none;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 8px;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255, 255, 255, 0.96);
+      border-top: 1px solid var(--line);
+      box-shadow: 0 -12px 28px rgba(23, 32, 51, 0.13);
     }
 
-    .form-field {
-      display: grid;
-      gap: 7px;
+    .icon { width: 20px; height: 20px; }
+
+    @media (max-width: 1040px) {
+      .nav-links { display: none; }
+      .hero-inner, .calculator, .risk-band, .cta-inner { grid-template-columns: 1fr; }
+      .hero-visual { max-width: 720px; }
+      .journey-grid, .trust-grid, .deal-grid { grid-template-columns: 1fr 1fr; }
+      .timeline { grid-template-columns: 1fr 1fr; }
     }
 
-    .form-field.full {
-      grid-column: 1 / -1;
-    }
-
-    .form-field label {
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.94);
-      color: var(--ink);
-      outline: none;
-      font-weight: 700;
-    }
-
-    .form-field input,
-    .form-field select {
-      min-height: 46px;
-      padding: 0 12px;
-    }
-
-    .form-field textarea {
-      min-height: 92px;
-      resize: vertical;
-      padding: 12px;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      border-color: var(--solar);
-      box-shadow: 0 0 0 3px rgba(243, 173, 34, 0.18);
-    }
-
-    .form-note,
-    .form-status {
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .form-status {
-      min-height: 18px;
-      color: #ffffff;
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.8);
-      font-weight: 600;
-    }
-
-    .contact-row:last-child {
-      border-bottom: 0;
-    }
-
-    .contact-row strong {
-      color: #ffffff;
-      text-align: right;
-    }
-
-    .footer {
-      padding: 30px 0;
-      background: #111827;
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .footer .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .footer-logo {
-      width: 118px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px 9px;
-      border-radius: 8px;
-      background: #ffffff;
-      flex: 0 0 auto;
-    }
-
-    .footer-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .disclaimer {
-      max-width: 760px;
-      text-align: right;
-    }
-
-    .icon {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 20px;
-    }
-
-    [hidden] {
-      display: none !important;
-    }
-
-    @media (max-width: 1020px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        order: -1;
-        width: min(680px, 100%);
-        margin: 0 auto;
-      }
-
-      .quick-stats,
-      .deal-grid,
-      .benefits,
-      .timeline {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .flow,
-      .info-band,
-      .calculator,
-      .cta-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .arrow-rail {
-        min-height: 210px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .nav {
-        min-height: 64px;
-      }
-
-      .brand-logo-wrap {
-        width: 76px;
-        height: 54px;
-        padding: 5px 7px;
-      }
-
-      .nav-cta {
-        min-height: 38px;
-        padding-inline: 11px;
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: 100vh;
-      }
-
-      .hero-inner {
-        padding: 76px 0 22px;
-        gap: 16px;
-      }
-
-      .hero-visual {
-        width: min(330px, 100%);
-      }
-
-      h1 {
-        margin: 14px 0 12px;
-        font-size: clamp(32px, 10.8vw, 42px);
-      }
-
-      .hero-copy {
-        margin-bottom: 22px;
-        font-size: 16px;
-      }
-
-      .hero-actions {
-        margin-bottom: 22px;
-      }
-
-      .hero .quick-stats {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-      }
-
-      .hero .stat {
-        min-height: 68px;
-        padding: 9px;
-      }
-
-      .hero .stat-value {
-        font-size: 18px;
-      }
-
-      .hero .stat-label {
-        font-size: 11px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .quick-stats,
-      .deal-grid,
-      .benefits,
-      .result-grid,
-      .timeline,
-      .spec-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 64px 0;
-      }
-
-      .section-head {
-        display: block;
-      }
-
-      .section-desc {
-        margin-top: 12px;
-      }
-
-      .deal-toolbar {
-        align-items: stretch;
-      }
-
-      .segmented {
-        width: 100%;
-      }
-
-      .segmented button {
-        padding-inline: 8px;
-        font-size: 13px;
-      }
-
-      .deal-card {
-        min-height: auto;
-      }
-
-      .deal-foot {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .deal-foot .button {
-        width: 100%;
-      }
-
-      .footer .wrap {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .disclaimer {
-        text-align: left;
-      }
+    @media (max-width: 720px) {
+      body { padding-bottom: 74px; }
+      .nav { min-height: 72px; }
+      .brand-logo-wrap { width: 78px; height: 56px; }
+      .nav-cta { min-height: 40px; padding-inline: 12px; font-size: 13px; }
+      .hero { min-height: auto; }
+      .hero-inner { padding: 104px 0 40px; gap: 28px; }
+      .hero-actions, .contact-links { display: grid; grid-template-columns: 1fr; }
+      .quick-stats, .journey-grid, .trust-grid, .deal-grid, .faq-grid, .timeline, .form-grid, .result-grid, .notice-grid { grid-template-columns: 1fr; }
+      .section { padding: 54px 0; }
+      .section-head { display: grid; gap: 14px; }
+      .data-list div { grid-template-columns: 1fr; gap: 2px; }
+      .deal-foot { align-items: stretch; flex-direction: column; }
+      .deal-foot .button { width: 100%; }
+      .mobile-cta { display: grid; }
+      .footer .wrap { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <nav class="nav" aria-label="Điều hướng chính">
-      <a class="brand" href="#top" aria-label="CÔNG TY TNHH AN NAM LỢI">
-        <span class="brand-logo-wrap">
-          <img class="brand-logo" src="logo.png" alt="CÔNG TY TNHH AN NAM LỢI">
-        </span>
+      <a class="brand-logo-wrap" href="#top" aria-label="An Nam Lợi">
+        <img class="brand-logo" src="logo.png" alt="Công ty TNHH An Nam Lợi">
       </a>
       <ul class="nav-links">
-        <li><a href="#model">Mô hình</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#investor">Nhà đầu tư</a></li>
-        <li><a href="#calculator">Ước tính</a></li>
-        <li><a href="#process">Quy trình</a></li>
+        <li><a href="#journeys">Nhu cầu</a></li>
+        <li><a href="#trust">Pháp lý</a></li>
+        <li><a href="#projects">Deal</a></li>
+        <li><a href="#risk">Rủi ro</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="nav-cta" href="#projects">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Xem deal
-      </a>
+      <a class="nav-cta" href="tel:0900000000">Gọi/Zalo tư vấn</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-content">
-          <div class="eyebrow">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 14.5 9.2 9l3.8 3.8L20 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 5.5v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Cho thuê điện mặt trời nhà xưởng
-          </div>
-          <h1>Thuê điện mặt trời cho nhà xưởng</h1>
-          <p class="hero-copy">An Nam Lợi triển khai hệ bám tải 500 kWp, hồ sơ nhanh gọn, giá thuê 1.780đ/kWh.</p>
+          <div class="eyebrow">Điện mặt trời mái nhà xưởng | Thuê điện | Deal đầu tư</div>
+          <h1>An Nam Lợi kết nối nhà xưởng, nhà đầu tư và đối tác bán hàng</h1>
+          <p class="hero-copy">Nhà xưởng dùng điện mặt trời không cần vốn đầu tư ban đầu. Nhà đầu tư xem từng dự án, hồ sơ pháp lý và dòng tiền dự kiến trước khi quyết định. Sales có kênh tiếp nhận lead nhà xưởng rõ ràng.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 6.5h16M4 12h16M4 17.5h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              Xem dự án
-            </a>
-            <a class="button button-ghost" href="#model">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              Mô hình
-            </a>
+            <a class="button button-primary" href="tel:0900000000">Gọi/Zalo tư vấn</a>
+            <a class="button button-ghost" href="#projects">Nhận hồ sơ deal</a>
+            <a class="button button-ghost" href="#cta">Đăng ký khảo sát nhà xưởng</a>
+            <a class="button button-green" href="#risk">Tôi muốn đầu tư</a>
           </div>
-
-          <div class="quick-stats" aria-label="Chỉ số chính">
-            <div class="stat">
-              <span class="stat-value">300 kWp+</span>
-              <span class="stat-label">Khách thuê</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">100 kWp</span>
-              <span class="stat-label">Mỗi slot</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">1.780đ</span>
-              <span class="stat-label">Mỗi kWh</span>
-            </div>
+          <div class="quick-stats">
+            <div class="stat"><span class="stat-value">0đ CAPEX</span><span class="stat-label">Cho nhà xưởng thuê điện</span></div>
+            <div class="stat"><span class="stat-value">Theo deal</span><span class="stat-label">Không gộp chéo dòng tiền</span></div>
+            <div class="stat"><span class="stat-value">Hồ sơ rõ</span><span class="stat-label">Kiểm tra hợp đồng trước khi tham gia</span></div>
           </div>
         </div>
-        <figure class="hero-visual" aria-label="Hình giới thiệu thuê điện mặt trời cho nhà xưởng">
-          <img src="image.jpg" alt="Thuê điện mặt trời cho nhà xưởng - hệ thống bám tải 500 kWp">
-        </figure>
+        <div class="hero-visual">
+          <img src="image.jpg" alt="Hệ thống điện mặt trời mái nhà xưởng">
+        </div>
       </div>
     </section>
 
-    <section class="section" id="model">
+    <section class="notice" aria-label="Lưu ý minh bạch">
+      <div class="wrap notice-grid">
+        <div>
+          <strong>Lưu ý minh bạch về dữ liệu dự án</strong>
+          <p>Trang này đang dùng nội dung demo. Các dự án mẫu phải được gắn nhãn rõ trước khi chạy quảng cáo hoặc gửi cho khách thật. Nếu là dự án thực tế, cần bổ sung khu vực tải hồ sơ xác minh: hợp đồng thuê điện, pháp lý mái, khảo sát kỹ thuật, PCCC, bảo hiểm và hồ sơ EPC/O&M.</p>
+        </div>
+        <a class="button button-light" href="#trust">Xem checklist hồ sơ</a>
+      </div>
+    </section>
+
+    <section class="section" id="journeys">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Đầu ra trước, đầu vào sau</div>
-            <h2>Mô hình rõ dòng tiền ngay từ lúc mở deal</h2>
+            <div class="section-kicker">Ba nhóm người dùng</div>
+            <h2>Đi đúng nhu cầu trước khi yêu cầu thông tin liên hệ</h2>
           </div>
-          <p class="section-desc">Khách thuê điện tạo nhu cầu thật. Platform gom vốn theo từng dự án, tổ chức EPC lắp đặt và chia doanh thu vận hành hằng tháng.</p>
+          <p class="section-desc">Mỗi nhóm có động cơ khác nhau: giảm tiền điện, tìm dòng tiền theo dự án, hoặc giới thiệu nhà xưởng và theo dõi hoa hồng.</p>
         </div>
-
-        <div class="flow">
-          <article class="flow-panel">
-            <div class="flow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none">
-                <path d="M4 20V9l8-5 8 5v11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M9 20v-6h6v6M8 11h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Đầu ra: nhà xưởng thuê điện</h3>
-            <p>Nhà máy có mái phù hợp, tiêu thụ điện ổn định và muốn giảm chi phí mà không bỏ vốn tự lắp hệ thống.</p>
+        <div class="journey-grid">
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">☀</div>
+            <h3>Chủ nhà xưởng thuê điện</h3>
+            <p>Dùng điện mặt trời ngay trên mái, không phải tự bỏ vốn lắp đặt hệ thống.</p>
             <ul class="mini-list">
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tối thiểu 300 kWp mỗi khách thuê</li>
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hợp đồng 10 năm, có thể gia hạn 5 năm</li>
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Giá thuê 1.780đ/kWh, tăng 3% mỗi năm</li>
+              <li><span class="check">✓</span>Giảm chi phí điện ban ngày theo giá thuê đã thỏa thuận</li>
+              <li><span class="check">✓</span>Không cần CAPEX ban đầu cho hệ thống</li>
+              <li><span class="check">✓</span>EPC, vận hành và bảo trì được đưa vào phương án</li>
             </ul>
+            <a class="button button-primary" href="#cta">Đăng ký khảo sát nhà xưởng</a>
           </article>
 
-          <div class="arrow-rail" aria-label="Luồng vận hành">
-            <div class="route">
-              <div class="route-step"><span>1</span> Có khách thuê</div>
-              <div class="route-step"><span>2</span> Mở deal 30 ngày</div>
-              <div class="route-step"><span>3</span> Nghiệm thu vận hành</div>
-              <div class="route-step"><span>4</span> Chia doanh thu</div>
-            </div>
-          </div>
-
-          <article class="flow-panel dark">
-            <div class="flow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none">
-                <path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3ZM8 12c1.7 0 3-1.3 3-3S9.7 6 8 6 5 7.3 5 9s1.3 3 3 3ZM3.5 19c.7-2.2 2.3-3.5 4.5-3.5s3.8 1.3 4.5 3.5M11.5 19c.8-2.8 2.5-4.3 5-4.3s4.2 1.5 5 4.3" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Đầu vào: nhà đầu tư cá nhân</h3>
-            <p>Nhà đầu tư đăng ký theo từng deal, ký phụ lục đồng tài trợ sau khi hệ thống nghiệm thu và vận hành.</p>
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">₫</div>
+            <h3>Nhà đầu tư cá nhân</h3>
+            <p>Tham gia theo từng dự án có hồ sơ riêng, dòng tiền dự kiến riêng và trạng thái riêng.</p>
             <ul class="mini-list">
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chốt cố định 1,8-2%/tháng tùy hệ thống</li>
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>80% doanh thu hệ thống chia cho nhà đầu tư</li>
-              <li><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>20% còn lại cho vận hành, bảo trì và sales</li>
+              <li><span class="check">✓</span>Dòng tiền mục tiêu theo hợp đồng, phụ thuộc sản lượng thực tế</li>
+              <li><span class="check">✓</span>Minh bạch tỷ lệ chia doanh thu và chi phí vận hành</li>
+              <li><span class="check">✓</span>Chỉ xem xét sau khi có bộ hồ sơ xác minh</li>
             </ul>
+            <a class="button button-green" href="#risk">Tôi muốn đầu tư</a>
+          </article>
+
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">↗</div>
+            <h3>Sales/referral partner</h3>
+            <p>Gửi lead nhà xưởng, theo dõi tình trạng xử lý và nhận chính sách hoa hồng theo từng hợp đồng.</p>
+            <ul class="mini-list">
+              <li><span class="check">✓</span>Nộp thông tin nhà xưởng và người phụ trách</li>
+              <li><span class="check">✓</span>Theo dõi trạng thái: tiếp nhận, khảo sát, báo giá, ký hợp đồng</li>
+              <li><span class="check">✓</span>Hoa hồng: [bổ sung % hoặc mức cố định]</li>
+            </ul>
+            <a class="button button-light" href="#cta">Gửi lead nhà xưởng</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="projects">
+    <section class="section alt" id="trust">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Danh sách nhà máy thuê</div>
-            <h2>3 dự án mẫu để nhà đầu tư chọn theo từng deal</h2>
+            <div class="section-kicker">Thông tin tin cậy</div>
+            <h2>Thông tin pháp nhân và hồ sơ cần kiểm tra trước khi chốt deal</h2>
           </div>
-          <p class="section-desc">Deal mở có thể đăng ký slot. Deal đã đóng hiển thị trạng thái để tránh nhận thêm vốn sau khi đủ danh sách.</p>
+          <p class="section-desc">Các trường dưới đây nên được thay bằng dữ liệu doanh nghiệp thật trước khi đưa trang vào vận hành.</p>
         </div>
+        <div class="trust-grid">
+          <article class="card trust-card">
+            <h3>Pháp nhân</h3>
+            <dl class="data-list">
+              <div><dt>Tên công ty</dt><dd>Công ty TNHH An Nam Lợi</dd></div>
+              <div><dt>Mã số thuế</dt><dd>[Bổ sung MST]</dd></div>
+              <div><dt>Địa chỉ</dt><dd>[Bổ sung địa chỉ đăng ký]</dd></div>
+              <div><dt>Đại diện</dt><dd>[Bổ sung người đại diện]</dd></div>
+            </dl>
+          </article>
+          <article class="card trust-card">
+            <h3>Đơn vị triển khai</h3>
+            <dl class="data-list">
+              <div><dt>EPC</dt><dd>[Bổ sung tên EPC]</dd></div>
+              <div><dt>O&M</dt><dd>[Bổ sung đơn vị vận hành]</dd></div>
+              <div><dt>Bảo hiểm</dt><dd>[Bổ sung đơn vị/điều khoản]</dd></div>
+              <div><dt>Đo đếm</dt><dd>[Bổ sung phương án công tơ]</dd></div>
+            </dl>
+          </article>
+          <article class="card trust-card">
+            <h3>Checklist hồ sơ pháp lý</h3>
+            <ul class="doc-list">
+              <li><span class="check">✓</span>Hợp đồng thuê điện/điện mặt trời với nhà xưởng</li>
+              <li><span class="check">✓</span>Giấy tờ quyền sử dụng mái và hiện trạng công trình</li>
+              <li><span class="check">✓</span>Khảo sát kỹ thuật, kết cấu mái, phương án đấu nối</li>
+              <li><span class="check">✓</span>Hồ sơ PCCC, an toàn điện, bảo hiểm và bảo trì</li>
+              <li><span class="check">✓</span>Phụ lục chia doanh thu/ủy quyền thu hộ nếu có</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Deal mẫu cần xác minh</div>
+            <h2>Danh sách dự án phải gắn với hồ sơ kiểm chứng</h2>
+          </div>
+          <p class="section-desc">Dòng tiền mục tiêu/dự kiến theo từng hợp đồng, phụ thuộc sản lượng thực tế, điều khoản thuê điện và hồ sơ pháp lý dự án.</p>
+        </div>
         <div class="deal-toolbar">
-          <div class="segmented" role="group" aria-label="Lọc trạng thái dự án">
-            <button class="is-active" type="button" data-filter="all" title="Hiển thị tất cả dự án">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Tất cả
-            </button>
-            <button type="button" data-filter="open" title="Chỉ hiển thị dự án còn mở">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              Đang mở
-            </button>
-            <button type="button" data-filter="closed" title="Chỉ hiển thị dự án đã đóng">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0v3M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              Đã đóng
-            </button>
+          <div class="segmented" role="tablist" aria-label="Lọc trạng thái deal">
+            <button class="is-active" type="button" data-filter="all">Tất cả</button>
+            <button type="button" data-filter="open">Đang nhận</button>
+            <button type="button" data-filter="demo">Mẫu demo</button>
           </div>
-          <a class="button button-light button-small" href="#cta">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Đề xuất nhà máy mới
-          </a>
+          <a class="button button-light button-small" href="#cta">Nhận hồ sơ deal</a>
         </div>
-
         <div class="deal-grid">
-          <article class="deal-card" data-status="open">
-            <div class="deal-media factory-1">
-              <img src="image.jpg" alt="Nhà máy may Tân Phú">
-              <div class="status open">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                Đang mở
-              </div>
+          <article class="deal-card" data-status="demo">
+            <div class="deal-media">
+              <img src="image.jpg" alt="Dự án mẫu nhà xưởng Bình Dương">
+              <div class="status demo">Dự án mẫu</div>
               <div class="deal-progress">
-                <div class="progress-meta"><span>Đã đăng ký</span><span>62%</span></div>
+                <div class="progress-meta"><span>Đăng ký quan tâm</span><span>62%</span></div>
                 <div class="bar"><span style="width: 62%"></span></div>
               </div>
             </div>
             <div class="deal-body">
-              <h3>Nhà máy may Tân Phú</h3>
-              <div class="location">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-                TP. Hồ Chí Minh
-              </div>
+              <h3>Mẫu: Nhà xưởng thực phẩm Bình Dương</h3>
+              <div class="location">Bình Dương | Cần xác minh hồ sơ</div>
               <div class="spec-grid">
                 <div class="spec"><span class="spec-label">Công suất</span><span class="spec-value">500 kWp</span></div>
-                <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + 5 năm</span></div>
-                <div class="spec"><span class="spec-label">Giá thuê</span><span class="spec-value">1.780đ/kWh</span></div>
-                <div class="spec"><span class="spec-label">Tăng giá</span><span class="spec-value">3%/năm</span></div>
+                <div class="spec"><span class="spec-label">Thời hạn</span><span class="spec-value">10 năm + gia hạn</span></div>
+                <div class="spec"><span class="spec-label">Giá thuê</span><span class="spec-value">Theo hợp đồng</span></div>
+                <div class="spec"><span class="spec-label">Hồ sơ</span><span class="spec-value">Đang bổ sung</span></div>
               </div>
-              <p class="deal-note">Mái xưởng phù hợp hệ bám tải tự tiêu, ưu tiên khách tiêu thụ ngày ổn định.</p>
+              <p class="deal-note">Thông tin minh họa. Không dùng làm cam kết lợi nhuận hoặc lời mời đầu tư khi chưa có bộ hồ sơ dự án thật.</p>
             </div>
             <div class="deal-foot">
-              <div class="slot"><strong>2/5 slot</strong> còn nhận đăng ký</div>
-              <a class="button button-primary button-small" href="#cta">Đăng ký</a>
+              <div class="slot"><strong>Demo</strong> cần xác minh</div>
+              <a class="button button-primary button-small" href="#cta">Nhận hồ sơ deal</a>
             </div>
           </article>
 
           <article class="deal-card" data-status="open">
-            <div class="deal-media factory-2">
-              <img src="image.jpg" alt="Kho lạnh Sóng Thần">
-              <div class="status open">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                Đang mở
-              </div>
+            <div class="deal-media">
+              <img src="image.jpg" alt="Dự án mẫu nhà máy kho lạnh">
+              <div class="status">Đang nhận quan tâm</div>
               <div class="deal-progress">
-                <div class="progress-meta"><span>Đã đăng ký</span><span>34%</span></div>
-                <div class="bar"><span style="width: 34%"></span></div>
+                <div class="progress-meta"><span>Đăng ký quan tâm</span><span>45%</span></div>
+                <div class="bar"><span style="width: 45%"></span></div>
               </div>
             </div>
             <div class="deal-body">
-              <h3>Kho lạnh Sóng Thần</h3>
-              <div class="location">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-                Bình Dương
-              </div>
+              <h3>Mẫu: Kho lạnh phụ tải ban ngày</h3>
+              <div class="location">Long An | Chờ hồ sơ thuê điện</div>
               <div class="spec-grid">
-                <div class="spec"><span class="spec-label">Công suất</span><span class="spec-value">800 kWp</span></div>
-                <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + 5 năm</span></div>
-                <div class="spec"><span class="spec-label">Giá thuê</span><span class="spec-value">1.780đ/kWh</span></div>
-                <div class="spec"><span class="spec-label">Tăng giá</span><span class="spec-value">3%/năm</span></div>
+                <div class="spec"><span class="spec-label">Công suất</span><span class="spec-value">750 kWp</span></div>
+                <div class="spec"><span class="spec-label">Sản lượng</span><span class="spec-value">Theo khảo sát</span></div>
+                <div class="spec"><span class="spec-label">Chia doanh thu</span><span class="spec-value">Theo phụ lục</span></div>
+                <div class="spec"><span class="spec-label">O&M</span><span class="spec-value">Có ngân sách</span></div>
               </div>
-              <p class="deal-note">Phụ tải lạnh dùng liên tục, phù hợp dự án có sản lượng ban ngày cao.</p>
+              <p class="deal-note">Phù hợp để minh họa cách trình bày hồ sơ. Cần bổ sung hợp đồng, phương án đấu nối và điều khoản thanh toán.</p>
             </div>
             <div class="deal-foot">
-              <div class="slot"><strong>5/8 slot</strong> còn nhận đăng ký</div>
-              <a class="button button-primary button-small" href="#cta">Đăng ký</a>
+              <div class="slot"><strong>Nhận quan tâm</strong> chưa chốt vốn</div>
+              <a class="button button-primary button-small" href="#cta">Tôi muốn đầu tư</a>
             </div>
           </article>
 
-          <article class="deal-card" data-status="closed">
-            <div class="deal-media factory-3">
-              <img src="image.jpg" alt="Xưởng cơ khí Long Thành">
-              <div class="status closed">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11V8a4 4 0 0 1 8 0v3M6 11h12v9H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                Đã đóng
-              </div>
+          <article class="deal-card" data-status="demo">
+            <div class="deal-media">
+              <img src="image.jpg" alt="Dự án mẫu xưởng cơ khí">
+              <div class="status demo">Dự án mẫu</div>
               <div class="deal-progress">
-                <div class="progress-meta"><span>Đã đăng ký</span><span>100%</span></div>
+                <div class="progress-meta"><span>Đăng ký quan tâm</span><span>100%</span></div>
                 <div class="bar"><span style="width: 100%"></span></div>
               </div>
             </div>
             <div class="deal-body">
-              <h3>Xưởng cơ khí Long Thành</h3>
-              <div class="location">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-                Đồng Nai
-              </div>
+              <h3>Mẫu: Xưởng cơ khí Đồng Nai</h3>
+              <div class="location">Đồng Nai | Cần kiểm tra pháp lý mái</div>
               <div class="spec-grid">
                 <div class="spec"><span class="spec-label">Công suất</span><span class="spec-value">300 kWp</span></div>
-                <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + 5 năm</span></div>
-                <div class="spec"><span class="spec-label">Giá thuê</span><span class="spec-value">1.780đ/kWh</span></div>
-                <div class="spec"><span class="spec-label">Tăng giá</span><span class="spec-value">3%/năm</span></div>
+                <div class="spec"><span class="spec-label">Thời hạn</span><span class="spec-value">10 năm</span></div>
+                <div class="spec"><span class="spec-label">Bảo hiểm</span><span class="spec-value">Chưa cập nhật</span></div>
+                <div class="spec"><span class="spec-label">Trạng thái</span><span class="spec-value">Minh họa</span></div>
               </div>
-              <p class="deal-note">Danh sách đồng tài trợ đã đủ, chuyển sang giai đoạn phụ lục và nghiệm thu.</p>
+              <p class="deal-note">Nếu chuyển thành dự án thật, cần thay bằng tên pháp nhân thuê điện, bộ ảnh thực tế và link hồ sơ xác minh.</p>
             </div>
             <div class="deal-foot">
-              <div class="slot"><strong>0/3 slot</strong> đã chốt danh sách</div>
-              <button class="button button-light button-small" type="button" disabled>Đã đóng</button>
+              <div class="slot"><strong>Demo</strong> không phải cam kết</div>
+              <a class="button button-light button-small" href="#trust">Xem checklist</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="investor">
+    <section class="section alt" id="risk">
       <div class="wrap">
-        <div class="info-band">
+        <div class="risk-band">
           <div>
-            <div class="section-kicker">Điều kiện deal</div>
-            <h3>Chỉ mở vốn khi đã có khách thuê và thông tin nhà máy</h3>
-            <p>Mỗi dự án có tên nhà máy, quy mô công suất, thời gian thuê, giá thuê, tiến độ huy động và trạng thái mở/đóng. Nhà đầu tư chọn từng deal riêng, không bị gộp chéo dòng tiền.</p>
+            <div class="section-kicker">Công bố rủi ro</div>
+            <h2>Nhà đầu tư cần đọc trước khi yêu cầu hồ sơ deal</h2>
+            <p>Dòng tiền mục tiêu/dự kiến theo từng hợp đồng, phụ thuộc sản lượng thực tế, điều khoản thuê điện và hồ sơ pháp lý dự án. Đây không phải cam kết lợi nhuận cố định.</p>
+            <a class="button button-green" href="#cta">Tôi muốn đầu tư</a>
           </div>
-          <div class="rules">
-            <div class="rule"><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tối thiểu 100 kWp cho mỗi nhà đầu tư trong một deal</div>
-            <div class="rule"><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chuẩn bị vốn khoảng 30 ngày sau khi deal mở</div>
-            <div class="rule"><span class="check"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="m6 12 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chốt xong deal nào, đóng nhận đăng ký deal đó</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Lợi ích chính</div>
-            <h2>Một trang giới thiệu cho cả khách thuê, nhà đầu tư và sales</h2>
-          </div>
-          <p class="section-desc">Nội dung tập trung vào quyết định: tiết kiệm bao nhiêu, đầu tư như thế nào, ai vận hành và deal nào còn nhận đăng ký.</p>
-        </div>
-
-        <div class="benefits">
-          <article class="benefit">
-            <div class="flow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 14.5 9.2 9l3.8 3.8L20 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 5.5v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Nhà xưởng</h3>
-            <p>Không bỏ hàng tỷ đồng tự lắp. Dùng điện mặt trời tại chỗ, giá thuê dễ dự toán và có đội vận hành bảo trì trọn gói.</p>
-          </article>
-
-          <article class="benefit">
-            <div class="flow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M5 19V8l7-4 7 4v11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 19v-5h8v5M8 10h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Nhà đầu tư</h3>
-            <p>Đăng ký theo từng dự án có khách thuê sẵn. Theo dõi tiến độ, sản lượng và dòng tiền dự kiến theo tỷ lệ tham gia.</p>
-          </article>
-
-          <article class="benefit">
-            <div class="flow-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M8 12h8M12 8v8M4 20h16M6 20V6h12v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Sales và môi giới</h3>
-            <p>Có landing page rõ ràng để gửi khách, giải thích nhanh mô hình, thu lead nhà xưởng và lead nhà đầu tư cho từng deal.</p>
-          </article>
+          <ul class="risk-list">
+            <li><span class="check">!</span>Sản lượng điện mặt trời có thể thay đổi theo thời tiết, thiết bị, bóng che và hiệu suất vận hành.</li>
+            <li><span class="check">!</span>Nhu cầu tiêu thụ điện của nhà xưởng có thể thay đổi trong quá trình hợp đồng.</li>
+            <li><span class="check">!</span>Hợp đồng thuê điện, quyền sử dụng mái, đấu nối và pháp lý dự án phải được kiểm tra trước khi tham gia.</li>
+            <li><span class="check">!</span>Dòng tiền dự kiến không phải lợi nhuận bảo đảm hoặc lãi suất cố định.</li>
+            <li><span class="check">!</span>Nhà đầu tư nên tự rà soát hợp đồng, phụ lục chia doanh thu, bảo hiểm và hồ sơ dự án.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1654,12 +742,11 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Ước tính nhanh</div>
-            <h2>Tính thử dòng tiền của một hệ thống</h2>
+            <div class="section-kicker">Ước tính minh họa</div>
+            <h2>Tính thử doanh thu điện theo sản lượng và giá thuê</h2>
           </div>
-          <p class="section-desc">Công cụ chỉ dùng để minh họa landing page. Khi có số liệu nhà máy thật, cần thay bằng sản lượng khảo sát và hợp đồng cụ thể.</p>
+          <p class="section-desc">Công cụ chỉ để minh họa. Số liệu thật cần lấy từ khảo sát, hợp đồng thuê điện và lịch vận hành nhà máy.</p>
         </div>
-
         <div class="calculator">
           <div class="calc-panel">
             <h3>Thông số deal</h3>
@@ -1690,29 +777,16 @@
               </div>
             </div>
           </div>
-
           <div class="result-panel">
             <div class="result-head">
               <h3>Kết quả dự kiến</h3>
-              <p>Doanh thu thực tế phụ thuộc sản lượng, lịch vận hành và điều khoản từng hợp đồng.</p>
+              <p>Doanh thu thực tế phụ thuộc sản lượng, lịch vận hành, thanh toán của bên thuê điện và điều khoản hợp đồng.</p>
             </div>
             <div class="result-grid">
-              <div class="result-item">
-                <span class="result-label">Sản lượng/tháng</span>
-                <span class="result-value" id="outKwh">60.000 kWh</span>
-              </div>
-              <div class="result-item">
-                <span class="result-label">Doanh thu/tháng</span>
-                <span class="result-value" id="outRevenue">106,8 tr</span>
-              </div>
-              <div class="result-item">
-                <span class="result-label">Nhà đầu tư nhận</span>
-                <span class="result-value green" id="outInvestor">85,4 tr</span>
-              </div>
-              <div class="result-item">
-                <span class="result-label">Vận hành, bảo trì, sales</span>
-                <span class="result-value" id="outOps">21,4 tr</span>
-              </div>
+              <div class="result-item"><span class="result-label">Sản lượng/tháng</span><span class="result-value" id="outKwh">60.000 kWh</span></div>
+              <div class="result-item"><span class="result-label">Doanh thu/tháng</span><span class="result-value" id="outRevenue">106,8 tr</span></div>
+              <div class="result-item"><span class="result-label">Nhà đầu tư nhận</span><span class="result-value green" id="outInvestor">85,4 tr</span></div>
+              <div class="result-item"><span class="result-label">O&M, vận hành, sales</span><span class="result-value" id="outOps">21,4 tr</span></div>
             </div>
           </div>
         </div>
@@ -1723,33 +797,37 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Quy trình chốt deal</div>
-            <h2>Từ khách thuê đến phụ lục đồng tài trợ</h2>
+            <div class="section-kicker">Quy trình</div>
+            <h2>Từ khảo sát nhà xưởng đến vận hành và phân bổ doanh thu</h2>
           </div>
-          <p class="section-desc">Trang landing page nên dẫn người xem đi theo đúng trình tự ra quyết định, không nhảy thẳng vào gọi vốn.</p>
+          <p class="section-desc">Quy trình giúp chủ xưởng, nhà đầu tư và đối tác referral biết bước tiếp theo của mình.</p>
         </div>
-
         <div class="timeline">
-          <article class="phase">
-            <div class="phase-num">01</div>
-            <h3>Khảo sát nhà máy</h3>
-            <p>Thu thông tin mái, hóa đơn điện, phụ tải, công suất phù hợp và khả năng ký thuê dài hạn.</p>
-          </article>
-          <article class="phase">
-            <div class="phase-num">02</div>
-            <h3>Đưa lên platform</h3>
-            <p>Tạo trang deal gồm nhà máy, công suất, giá thuê, thời hạn, tiến độ vốn và trạng thái mở.</p>
-          </article>
-          <article class="phase">
-            <div class="phase-num">03</div>
-            <h3>Chốt danh sách</h3>
-            <p>Nhà đầu tư đăng ký theo slot. Khi đủ vốn, deal chuyển sang đã đóng và ngừng nhận thêm.</p>
-          </article>
-          <article class="phase">
-            <div class="phase-num">04</div>
-            <h3>Nghiệm thu vận hành</h3>
-            <p>Ký phụ lục đồng tài trợ, theo dõi sản lượng, thu tiền điện và phân phối doanh thu hằng tháng.</p>
-          </article>
+          <article class="phase"><div class="phase-num">01</div><h3>Tiếp nhận nhu cầu</h3><p>Nhận thông tin mái, hóa đơn điện, người phụ trách và nhu cầu thuê điện hoặc giới thiệu khách.</p></article>
+          <article class="phase"><div class="phase-num">02</div><h3>Khảo sát và báo giá</h3><p>Đánh giá kết cấu mái, phụ tải, đấu nối, sản lượng dự kiến và phương án giá thuê điện.</p></article>
+          <article class="phase"><div class="phase-num">03</div><h3>Hoàn thiện hồ sơ</h3><p>Tập hợp hợp đồng thuê điện, pháp lý mái, phương án EPC/O&M, bảo hiểm và phụ lục chia doanh thu.</p></article>
+          <article class="phase"><div class="phase-num">04</div><h3>Vận hành và báo cáo</h3><p>Theo dõi sản lượng, thu tiền điện, cập nhật trạng thái referral và phân bổ doanh thu theo hồ sơ đã ký.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">FAQ</div>
+            <h2>Câu hỏi cần trả lời trước khi khách để lại thông tin</h2>
+          </div>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item"><h3>Cấu trúc pháp lý của deal là gì?</h3><p>Cần có hợp đồng thuê điện với nhà xưởng và phụ lục/thoả thuận tham gia dự án thể hiện quyền, nghĩa vụ, tỷ lệ chia doanh thu và phương thức thanh toán.</p></article>
+          <article class="faq-item"><h3>Ai sở hữu hệ thống điện mặt trời?</h3><p>Quyền sở hữu phải ghi rõ trong hợp đồng: chủ đầu tư dự án, pháp nhân vận hành hoặc cấu trúc đồng tài trợ tùy hồ sơ từng dự án.</p></article>
+          <article class="faq-item"><h3>Doanh thu được thu như thế nào?</h3><p>Doanh thu thường đến từ tiền điện nhà xưởng thanh toán theo sản lượng đo đếm và đơn giá thuê. Cần xác minh tài khoản nhận tiền, kỳ thanh toán và quyền kiểm tra số liệu.</p></article>
+          <article class="faq-item"><h3>Nếu nhà xưởng ngừng mua điện thì sao?</h3><p>Cần xem điều khoản vi phạm, chấm dứt, bồi thường, tháo dỡ, chuyển giao hệ thống và phương án xử lý khi phụ tải thay đổi hoặc nhà xưởng dừng hoạt động.</p></article>
+          <article class="faq-item"><h3>Ai chịu trách nhiệm O&M?</h3><p>Đơn vị vận hành/bảo trì phải được nêu trong hồ sơ, gồm phạm vi bảo trì, thời gian phản hồi, thay thế thiết bị và ngân sách O&M.</p></article>
+          <article class="faq-item"><h3>Dự án có bảo hiểm không?</h3><p>Cần kiểm tra bảo hiểm tài sản, trách nhiệm dân sự, cháy nổ nếu áp dụng và các trường hợp loại trừ trước khi quyết định.</p></article>
+          <article class="faq-item"><h3>Thời hạn hợp đồng bao lâu?</h3><p>Thời hạn thường theo hợp đồng thuê điện từng nhà xưởng, có thể kèm điều khoản gia hạn, mua lại hoặc tháo dỡ khi hết hạn.</p></article>
+          <article class="faq-item"><h3>Nhà đầu tư có thể thoái vốn/chuyển nhượng không?</h3><p>Cần có điều khoản chuyển nhượng, điều kiện bên nhận chuyển nhượng, phí nếu có và quy trình cập nhật quyền nhận doanh thu.</p></article>
         </div>
       </div>
     </section>
@@ -1757,43 +835,53 @@
     <section class="cta" id="cta">
       <div class="wrap cta-inner">
         <div>
-          <div class="section-kicker">Bắt đầu bằng một deal thật</div>
-          <h2>Có nhà xưởng thuê hoặc muốn tham gia đầu tư?</h2>
-          <p>Gửi thông tin nhà máy, công suất mong muốn hoặc slot đầu tư dự kiến. Mỗi deal sẽ được xác minh riêng trước khi mở đăng ký.</p>
+          <div class="section-kicker">Liên hệ</div>
+          <h2>Nhận tư vấn theo đúng vai trò của bạn</h2>
+          <p>Gửi thông tin để An Nam Lợi phản hồi theo nhu cầu: khảo sát nhà xưởng, nhận hồ sơ deal đầu tư hoặc đăng ký làm đối tác referral.</p>
+          <div class="contact-links">
+            <a class="button button-primary" href="tel:0900000000">Gọi: 0900 000 000</a>
+            <a class="button button-ghost" href="https://zalo.me/0900000000" target="_blank" rel="noopener">Zalo tư vấn</a>
+          </div>
         </div>
         <div class="contact-box">
           <h3>Thông tin liên hệ</h3>
-          <p class="form-intro">Điền thông tin để An Nam Lợi tư vấn dự án phù hợp hoặc tiếp nhận nhà xưởng cần thuê điện.</p>
-          <form class="lead-form" id="leadForm">
+          <p class="form-intro">Các trường họ tên và điện thoại/Zalo là bắt buộc. Nếu chưa có backend, form sẽ mở email soạn sẵn.</p>
+          <form class="lead-form" id="leadForm" novalidate>
             <div class="form-grid">
-              <div class="form-field">
+              <div class="form-field" data-required>
                 <label for="leadName">Họ và tên</label>
-                <input id="leadName" name="name" type="text" autocomplete="name" required placeholder="Nguyễn Văn A">
+                <input id="leadName" name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" required>
+                <span class="field-error">Vui lòng nhập họ tên.</span>
+              </div>
+              <div class="form-field" data-required>
+                <label for="leadPhone">Điện thoại/Zalo</label>
+                <input id="leadPhone" name="phone" type="tel" autocomplete="tel" placeholder="09xx xxx xxx" required>
+                <span class="field-error">Vui lòng nhập số điện thoại hoặc Zalo.</span>
               </div>
               <div class="form-field">
-                <label for="leadPhone">Số điện thoại/Zalo</label>
-                <input id="leadPhone" name="phone" type="tel" autocomplete="tel" required placeholder="09xx xxx xxx">
-              </div>
-              <div class="form-field">
-                <label for="leadRole">Bạn là</label>
-                <select id="leadRole" name="role" required>
-                  <option value="">Chọn nhu cầu</option>
-                  <option>Chủ nhà xưởng thuê điện</option>
+                <label for="leadRole">Vai trò</label>
+                <select id="leadRole" name="role">
+                  <option value="">Chọn vai trò</option>
+                  <option>Chủ nhà xưởng muốn thuê điện</option>
                   <option>Nhà đầu tư cá nhân</option>
-                  <option>Sales/môi giới giới thiệu khách</option>
+                  <option>Sales/referral partner</option>
                 </select>
               </div>
               <div class="form-field">
-                <label for="leadScale">Công suất hoặc vốn dự kiến</label>
-                <input id="leadScale" name="scale" type="text" required placeholder="500 kWp hoặc 100 kWp">
+                <label for="leadProvince">Tỉnh/thành</label>
+                <input id="leadProvince" name="province" type="text" placeholder="Bình Dương, Đồng Nai, Long An...">
+              </div>
+              <div class="form-field full">
+                <label for="leadScale">Diện tích mái nhà xưởng hoặc số tiền muốn đầu tư</label>
+                <input id="leadScale" name="scale" type="text" placeholder="Ví dụ: mái 5.000 m² hoặc đầu tư 500 triệu">
               </div>
               <div class="form-field full">
                 <label for="leadNote">Ghi chú</label>
-                <textarea id="leadNote" name="note" placeholder="Khu vực nhà xưởng, thời gian muốn triển khai, hoặc deal muốn đăng ký"></textarea>
+                <textarea id="leadNote" name="note" placeholder="Nhu cầu, thời gian triển khai, deal quan tâm hoặc thông tin người phụ trách nhà xưởng"></textarea>
               </div>
             </div>
             <button class="button button-primary" type="submit" style="width: 100%;">Gửi thông tin</button>
-            <div class="form-note">Trang tĩnh sẽ mở email soạn sẵn. Có thể thay email nhận khi có thông tin liên hệ chính thức.</div>
+            <div class="form-note">Email nhận tạm thời: contact@example.com. Thay bằng email chính thức hoặc backend CRM khi triển khai thật.</div>
             <div class="form-status" id="formStatus" aria-live="polite"></div>
           </form>
         </div>
@@ -1803,12 +891,17 @@
 
   <footer class="footer">
     <div class="wrap">
-      <a class="footer-logo" href="#top" aria-label="CÔNG TY TNHH AN NAM LỢI">
-        <img src="logo.png" alt="CÔNG TY TNHH AN NAM LỢI">
+      <a class="footer-logo" href="#top" aria-label="Công ty TNHH An Nam Lợi">
+        <img src="logo.png" alt="Công ty TNHH An Nam Lợi">
       </a>
-      <div class="disclaimer">Thông tin trên trang là nội dung giới thiệu mô hình và số liệu minh họa. Lợi nhuận thực tế cần căn cứ hợp đồng, sản lượng vận hành và hồ sơ pháp lý của từng dự án.</div>
+      <div class="disclaimer">Thông tin trên trang là nội dung giới thiệu mô hình và số liệu minh họa. Dòng tiền thực tế cần căn cứ hợp đồng, sản lượng vận hành, lịch thanh toán, chi phí O&M và hồ sơ pháp lý của từng dự án. Nhà đầu tư nên tự rà soát hồ sơ trước khi tham gia.</div>
     </div>
   </footer>
+
+  <div class="mobile-cta" aria-label="Liên hệ nhanh trên di động">
+    <a class="button button-primary button-small" href="tel:0900000000">Gọi/Zalo</a>
+    <a class="button button-green button-small" href="#cta">Đăng ký</a>
+  </div>
 
   <script>
     const filterButtons = document.querySelectorAll("[data-filter]");
@@ -1836,7 +929,6 @@
     const outRevenue = document.querySelector("#outRevenue");
     const outInvestor = document.querySelector("#outInvestor");
     const outOps = document.querySelector("#outOps");
-
     const formatNumber = new Intl.NumberFormat("vi-VN");
 
     function formatMillion(value) {
@@ -1865,14 +957,37 @@
     [capacity, yieldSelect, price, share].forEach((input) => {
       input.addEventListener("input", updateCalc);
     });
-
     updateCalc();
 
     const leadForm = document.querySelector("#leadForm");
     const formStatus = document.querySelector("#formStatus");
+    const requiredFields = [
+      document.querySelector("#leadName"),
+      document.querySelector("#leadPhone")
+    ];
+
+    function setInvalid(input, invalid) {
+      input.closest(".form-field")?.classList.toggle("is-invalid", invalid);
+    }
+
+    requiredFields.forEach((input) => {
+      input.addEventListener("input", () => setInvalid(input, !input.value.trim()));
+    });
 
     leadForm?.addEventListener("submit", (event) => {
       event.preventDefault();
+
+      let hasError = false;
+      requiredFields.forEach((input) => {
+        const invalid = !input.value.trim();
+        setInvalid(input, invalid);
+        hasError = hasError || invalid;
+      });
+
+      if (hasError) {
+        formStatus.textContent = "Vui lòng nhập họ tên và số điện thoại/Zalo trước khi gửi.";
+        return;
+      }
 
       const data = new FormData(leadForm);
       const lines = [
@@ -1880,18 +995,16 @@
         "",
         `Họ tên: ${data.get("name")}`,
         `Điện thoại/Zalo: ${data.get("phone")}`,
-        `Vai trò: ${data.get("role")}`,
-        `Công suất hoặc vốn dự kiến: ${data.get("scale")}`,
+        `Vai trò: ${data.get("role") || "Chưa chọn"}`,
+        `Tỉnh/thành: ${data.get("province") || "Chưa cung cấp"}`,
+        `Diện tích mái hoặc số tiền đầu tư: ${data.get("scale") || "Chưa cung cấp"}`,
         `Ghi chú: ${data.get("note") || "Không có"}`
       ];
 
       const subject = encodeURIComponent("Đăng ký tư vấn An Nam Lợi");
       const body = encodeURIComponent(lines.join("\n"));
       window.location.href = `mailto:contact@example.com?subject=${subject}&body=${body}`;
-
-      if (formStatus) {
-        formStatus.textContent = "Đã tạo email soạn sẵn từ thông tin bạn nhập.";
-      }
+      formStatus.textContent = "Đã tạo email soạn sẵn từ thông tin bạn nhập.";
     });
   </script>
 </body>
