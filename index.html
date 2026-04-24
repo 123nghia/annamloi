@@ -40,7 +40,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     body {
       margin: 0;
       background: var(--paper);
@@ -135,7 +135,7 @@
     .button-small { min-height: 42px; padding-inline: 14px; font-size: 14px; }
 
     .hero {
-      min-height: 100vh;
+      min-height: 92svh;
       display: flex;
       align-items: center;
       position: relative;
@@ -147,7 +147,7 @@
     .hero-inner {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 130px 0 54px;
+      padding: 118px 0 42px;
       display: grid;
       grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
       gap: 46px;
@@ -228,16 +228,6 @@
     }
     .section-kicker { margin-bottom: 10px; color: var(--solar-strong); font-size: 13px; font-weight: 800; text-transform: uppercase; }
     .section-desc { max-width: 540px; margin-bottom: 0; color: var(--muted); font-weight: 500; }
-
-    .notice {
-      border-top: 1px solid #f5dba8;
-      border-bottom: 1px solid #f5dba8;
-      background: #fff8ea;
-      padding: 22px 0;
-    }
-    .notice-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-    .notice strong { display: block; margin-bottom: 6px; color: #7c4a05; }
-    .notice p { margin: 0; color: #6f5c37; font-weight: 600; }
 
     .journey-grid, .trust-grid, .deal-grid, .faq-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .card, .deal-card, .faq-item {
@@ -396,7 +386,93 @@
     .deal-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 20px; border-top: 1px solid var(--line); }
     .slot { color: var(--muted); font-size: 13px; font-weight: 700; }
     .slot strong { display: block; color: var(--ink); font-size: 18px; }
-    .button-disabled { pointer-events: none; cursor: default; opacity: 0.72; box-shadow: none; }
+    body.modal-open { overflow: hidden; }
+    .project-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(15, 23, 38, 0.72);
+      backdrop-filter: blur(12px);
+    }
+    .project-modal[hidden] { display: none; }
+    .modal-card {
+      width: min(960px, 100%);
+      max-height: min(86vh, 760px);
+      overflow: auto;
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
+    }
+    .modal-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+    }
+    .modal-head h2 { margin: 0; font-size: clamp(22px, 3vw, 32px); }
+    .modal-close {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 700;
+    }
+    .modal-body { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr); gap: 0; }
+    .modal-media { background: #eef2f0; }
+    .modal-media img { width: 100%; height: 100%; min-height: 430px; object-fit: cover; }
+    .modal-content { padding: 22px; }
+    .modal-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      margin-bottom: 14px;
+      padding: 0 11px;
+      border-radius: 999px;
+      background: var(--leaf);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .modal-status.closed { background: #475467; }
+    .modal-location { margin-bottom: 18px; color: var(--muted); font-weight: 700; }
+    .modal-spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 18px; }
+    .modal-spec { min-height: 86px; padding: 13px; border: 1px solid #e4ece5; border-radius: 8px; background: #f5f8f5; }
+    .modal-spec span { display: block; margin-bottom: 5px; color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .modal-spec strong { color: var(--ink); font-size: 16px; line-height: 1.35; }
+    .modal-block { margin-bottom: 18px; }
+    .modal-block h3 { margin-bottom: 10px; font-size: 16px; }
+    .modal-checklist { display: grid; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .modal-checklist li { display: flex; gap: 9px; color: var(--muted); font-size: 14px; font-weight: 650; }
+    .modal-note {
+      margin: 0 0 18px;
+      padding: 14px;
+      border-radius: 8px;
+      background: #fff8ea;
+      color: #6f5c37;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .modal-actions .button { width: 100%; }
 
     .risk-band {
       display: grid;
@@ -515,12 +591,18 @@
       .hero { min-height: auto; }
       .hero-inner { padding: 104px 0 40px; gap: 28px; }
       .hero-actions, .contact-links { display: grid; grid-template-columns: 1fr; }
-      .quick-stats, .journey-grid, .trust-grid, .deal-grid, .faq-grid, .timeline, .form-grid, .result-grid, .notice-grid { grid-template-columns: 1fr; }
+      .quick-stats, .journey-grid, .trust-grid, .deal-grid, .faq-grid, .timeline, .form-grid, .result-grid { grid-template-columns: 1fr; }
       .section { padding: 54px 0; }
       .section-head { display: grid; gap: 14px; }
       .data-list div { grid-template-columns: 1fr; gap: 2px; }
       .deal-foot { align-items: stretch; flex-direction: column; }
       .deal-foot .button { width: 100%; }
+      .project-modal { padding: 12px; place-items: end center; }
+      .modal-card { max-height: 92vh; }
+      .modal-head { padding: 14px; }
+      .modal-body, .modal-spec-grid, .modal-actions { grid-template-columns: 1fr; }
+      .modal-media img { min-height: 240px; max-height: 320px; }
+      .modal-content { padding: 16px; }
       .mobile-cta { display: grid; }
       .footer .wrap { grid-template-columns: 1fr; }
     }
@@ -549,12 +631,11 @@
         <div class="hero-content">
           <div class="eyebrow">Điện mặt trời mái nhà xưởng | Thuê điện | Deal đầu tư</div>
           <h1>An Nam Lợi kết nối nhà xưởng, nhà đầu tư và đối tác bán hàng</h1>
-          <p class="hero-copy">Nhà xưởng dùng điện mặt trời không cần vốn đầu tư ban đầu. Nhà đầu tư xem từng dự án, hồ sơ pháp lý và dòng tiền dự kiến trước khi quyết định. Sales có kênh tiếp nhận lead nhà xưởng rõ ràng.</p>
+          <p class="hero-copy">Nhà xưởng thuê điện mặt trời để giảm chi phí ban ngày. Nhà đầu tư xem từng deal riêng trước khi quyết định. Đối tác bán hàng gửi lead và theo dõi trạng thái xử lý.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="tel:0900000000">Gọi/Zalo tư vấn</a>
-            <a class="button button-ghost" href="#projects">Nhận hồ sơ deal</a>
-            <a class="button button-ghost" href="#cta">Đăng ký khảo sát nhà xưởng</a>
-            <a class="button button-green" href="#risk">Tôi muốn đầu tư</a>
+            <a class="button button-primary" href="#projects">Xem dự án đang mở</a>
+            <a class="button button-green" href="#cta" data-lead-role="Chủ nhà xưởng muốn thuê điện">Đăng ký khảo sát</a>
+            <a class="button button-ghost" href="tel:0900000000">Gọi/Zalo tư vấn</a>
           </div>
           <div class="quick-stats">
             <div class="stat"><span class="stat-value">Không cần bỏ vốn</span><span class="stat-label">Nhà xưởng thuê điện mặt trời</span></div>
@@ -565,16 +646,6 @@
         <div class="hero-visual">
           <img src="image.jpg" alt="Hệ thống điện mặt trời mái nhà xưởng">
         </div>
-      </div>
-    </section>
-
-    <section class="notice" aria-label="Lưu ý minh bạch">
-      <div class="wrap notice-grid">
-        <div>
-          <strong>Lưu ý minh bạch về dữ liệu dự án</strong>
-          <p>Trang này đang dùng nội dung demo. Các dự án mẫu phải được gắn nhãn rõ trước khi chạy quảng cáo hoặc gửi cho khách thật. Nếu là dự án thực tế, cần bổ sung khu vực tải hồ sơ xác minh: hợp đồng thuê điện, pháp lý mái, khảo sát kỹ thuật, PCCC, bảo hiểm và hồ sơ EPC/O&M.</p>
-        </div>
-        <a class="button button-light" href="#trust">Xem checklist hồ sơ</a>
       </div>
     </section>
 
@@ -597,7 +668,7 @@
               <li><span class="check">✓</span>Không cần bỏ vốn lắp đặt hệ thống ban đầu</li>
               <li><span class="check">✓</span>EPC, vận hành và bảo trì được đưa vào phương án</li>
             </ul>
-            <a class="button button-primary" href="#cta">Đăng ký khảo sát nhà xưởng</a>
+            <a class="button button-primary" href="#cta" data-lead-role="Chủ nhà xưởng muốn thuê điện">Đăng ký khảo sát nhà xưởng</a>
           </article>
 
           <article class="card">
@@ -609,7 +680,7 @@
               <li><span class="check">✓</span>Minh bạch tỷ lệ chia doanh thu và chi phí vận hành</li>
               <li><span class="check">✓</span>Chỉ xem xét sau khi có bộ hồ sơ xác minh</li>
             </ul>
-            <a class="button button-green" href="#risk">Tôi muốn đầu tư</a>
+            <a class="button button-green" href="#projects" data-lead-role="Nhà đầu tư cá nhân">Xem deal đầu tư</a>
           </article>
 
           <article class="card">
@@ -621,7 +692,7 @@
               <li><span class="check">✓</span>Theo dõi trạng thái: tiếp nhận, khảo sát, báo giá, ký hợp đồng</li>
               <li><span class="check">✓</span>Hoa hồng: [bổ sung % hoặc mức cố định]</li>
             </ul>
-            <a class="button button-light" href="#cta">Gửi lead nhà xưởng</a>
+            <a class="button button-light" href="#cta" data-lead-role="Sales/referral partner">Gửi lead nhà xưởng</a>
           </article>
         </div>
       </div>
@@ -674,9 +745,9 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">Danh sách nhà máy thuê điện</div>
-            <h2>3 dự án mẫu, chốt deal nào đóng deal đó</h2>
+            <h2>Dự án đang mở và deal đã chốt</h2>
           </div>
-          <p class="section-desc">Dữ liệu bên dưới đang dùng tạm để trình bày. Khi có khách hàng thật, thay bằng tên nhà máy, ảnh thực tế, hợp đồng thuê điện và hồ sơ xác minh.</p>
+          <p class="section-desc">Thông tin hiện dùng dữ liệu mẫu để dựng flow. Khi có khách hàng thật, thay bằng tên nhà máy, ảnh thực tế, hợp đồng thuê điện và hồ sơ xác minh.</p>
         </div>
         <div class="deal-toolbar">
           <div class="segmented" role="tablist" aria-label="Lọc trạng thái deal">
@@ -684,7 +755,7 @@
             <button type="button" data-filter="open">Còn mở</button>
             <button type="button" data-filter="closed">Đã chốt</button>
           </div>
-          <a class="button button-light button-small" href="#cta">Nhận chi tiết dự án</a>
+          <a class="button button-light button-small" href="#cta" data-lead-role="Nhà đầu tư cá nhân">Nhận chi tiết dự án</a>
         </div>
         <div class="deal-grid">
           <article class="deal-card" data-status="open">
@@ -703,18 +774,18 @@
             </div>
             <div class="deal-body">
               <h3>Nhà máy thực phẩm Bình Dương</h3>
-              <div class="location">Bình Dương | 500 kWp | Dữ liệu tạm</div>
+              <div class="location">Bình Dương | 500 kWp | Hồ sơ đang cập nhật</div>
               <div class="spec-grid">
                 <div class="spec"><span class="spec-label">Nhà máy</span><span class="spec-value">Thực phẩm</span></div>
                 <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + gia hạn 5 năm</span></div>
                 <div class="spec"><span class="spec-label">Giá thuê</span><span class="spec-value">+1.780 đ/kWh</span></div>
                 <div class="spec"><span class="spec-label">Tăng hằng năm</span><span class="spec-value">3%/năm</span></div>
               </div>
-              <p class="deal-note">Còn mở cho nhà đầu tư quan tâm. Cần hồ sơ thật trước khi gửi khách.</p>
+              <p class="deal-note">Còn mở cho nhà đầu tư quan tâm. Hồ sơ chi tiết sẽ gửi sau khi xác minh.</p>
             </div>
             <div class="deal-foot">
               <div class="slot"><strong>Còn mở</strong> chưa chốt deal</div>
-              <a class="button button-primary button-small" href="#cta">Xem chi tiết</a>
+              <button class="button button-primary button-small" type="button" data-detail-button>Xem chi tiết</button>
             </div>
           </article>
 
@@ -734,7 +805,7 @@
             </div>
             <div class="deal-body">
               <h3>Kho lạnh Long An</h3>
-              <div class="location">Long An | 750 kWp | Dữ liệu tạm</div>
+              <div class="location">Long An | 750 kWp | Deal đã đóng</div>
               <div class="spec-grid">
                 <div class="spec"><span class="spec-label">Nhà máy</span><span class="spec-value">Kho lạnh</span></div>
                 <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + gia hạn 5 năm</span></div>
@@ -745,7 +816,7 @@
             </div>
             <div class="deal-foot">
               <div class="slot"><strong>Đã chốt</strong> đóng deal</div>
-              <span class="button button-light button-small button-disabled" aria-disabled="true">Đã chốt deal</span>
+              <button class="button button-light button-small" type="button" data-detail-button>Xem chi tiết</button>
             </div>
           </article>
 
@@ -765,7 +836,7 @@
             </div>
             <div class="deal-body">
               <h3>Xưởng cơ khí Đồng Nai</h3>
-              <div class="location">Đồng Nai | 300 kWp | Dữ liệu tạm</div>
+              <div class="location">Đồng Nai | 300 kWp | Hồ sơ đang cập nhật</div>
               <div class="spec-grid">
                 <div class="spec"><span class="spec-label">Nhà máy</span><span class="spec-value">Cơ khí</span></div>
                 <div class="spec"><span class="spec-label">Thời gian thuê</span><span class="spec-value">10 năm + gia hạn 5 năm</span></div>
@@ -776,7 +847,7 @@
             </div>
             <div class="deal-foot">
               <div class="slot"><strong>Còn mở</strong> nhận đăng ký</div>
-              <a class="button button-primary button-small" href="#cta">Xem chi tiết</a>
+              <button class="button button-primary button-small" type="button" data-detail-button>Xem chi tiết</button>
             </div>
           </article>
         </div>
@@ -790,7 +861,7 @@
             <div class="section-kicker">Công bố rủi ro</div>
             <h2>Nhà đầu tư cần đọc trước khi yêu cầu hồ sơ deal</h2>
             <p>Dòng tiền mục tiêu/dự kiến theo từng hợp đồng, phụ thuộc sản lượng thực tế, điều khoản thuê điện và hồ sơ pháp lý dự án. Đây không phải cam kết lợi nhuận cố định.</p>
-            <a class="button button-green" href="#cta">Tôi muốn đầu tư</a>
+            <a class="button button-green" href="#cta" data-lead-role="Nhà đầu tư cá nhân">Tôi muốn đầu tư</a>
           </div>
           <ul class="risk-list">
             <li><span class="check">!</span>Sản lượng điện mặt trời có thể thay đổi theo thời tiết, thiết bị, bóng che và hiệu suất vận hành.</li>
@@ -910,7 +981,7 @@
         </div>
         <div class="contact-box">
           <h3>Thông tin liên hệ</h3>
-          <p class="form-intro">Các trường họ tên và điện thoại/Zalo là bắt buộc. Nếu chưa có backend, form sẽ mở email soạn sẵn.</p>
+          <p class="form-intro">Chọn đúng vai trò để An Nam Lợi phản hồi theo nhu cầu: khảo sát nhà xưởng, nhận hồ sơ deal hoặc gửi lead đối tác.</p>
           <form class="lead-form" id="leadForm" novalidate>
             <div class="form-grid">
               <div class="form-field" data-required>
@@ -946,7 +1017,7 @@
               </div>
             </div>
             <button class="button button-primary" type="submit" style="width: 100%;">Gửi thông tin</button>
-            <div class="form-note">Email nhận tạm thời: contact@example.com. Thay bằng email chính thức hoặc backend CRM khi triển khai thật.</div>
+            <div class="form-note">Thông tin sẽ được tổng hợp vào email tư vấn để đội phụ trách phản hồi nhanh hơn.</div>
             <div class="form-status" id="formStatus" aria-live="polite"></div>
           </form>
         </div>
@@ -973,6 +1044,38 @@
     </div>
   </footer>
 
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card" role="document">
+      <div class="modal-head">
+        <h2 id="modalTitle">Chi tiết dự án</h2>
+        <button class="modal-close" type="button" data-modal-close aria-label="Đóng chi tiết dự án">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="modalImage" src="image.jpg" alt="">
+        </div>
+        <div class="modal-content">
+          <div class="modal-status" id="modalStatus"><span class="status-icon open" aria-hidden="true"></span><span>Còn mở</span></div>
+          <div class="modal-location" id="modalLocation"></div>
+          <div class="modal-spec-grid" id="modalSpecs"></div>
+          <div class="modal-block">
+            <h3>Điểm cần kiểm tra</h3>
+            <ul class="modal-checklist">
+              <li><span class="check">✓</span>Hợp đồng thuê điện và thời hạn gia hạn</li>
+              <li><span class="check">✓</span>Pháp lý mái, đấu nối, PCCC và bảo hiểm</li>
+              <li><span class="check">✓</span>Sản lượng đo đếm, lịch thanh toán và O&M</li>
+            </ul>
+          </div>
+          <p class="modal-note" id="modalNote"></p>
+          <div class="modal-actions">
+            <a class="button button-primary button-small" id="modalPrimaryAction" href="#cta" data-modal-close data-lead-role="Nhà đầu tư cá nhân">Nhận hồ sơ deal</a>
+            <button class="button button-light button-small" type="button" data-modal-close>Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="mobile-cta" aria-label="Liên hệ nhanh trên di động">
     <a class="button button-primary button-small" href="tel:0900000000">Gọi/Zalo</a>
     <a class="button button-green button-small" href="#cta">Đăng ký</a>
@@ -992,6 +1095,89 @@
           card.hidden = status !== "all" && card.dataset.status !== status;
         });
       });
+    });
+
+    const detailButtons = document.querySelectorAll("[data-detail-button]");
+    const projectModal = document.querySelector("#projectModal");
+    const modalTitle = document.querySelector("#modalTitle");
+    const modalImage = document.querySelector("#modalImage");
+    const modalStatus = document.querySelector("#modalStatus");
+    const modalLocation = document.querySelector("#modalLocation");
+    const modalSpecs = document.querySelector("#modalSpecs");
+    const modalNote = document.querySelector("#modalNote");
+    const modalPrimaryAction = document.querySelector("#modalPrimaryAction");
+    let activeDetailButton = null;
+
+    function fillProjectModal(card) {
+      const title = card.querySelector(".deal-body h3")?.textContent.trim() || "Chi tiết dự án";
+      const location = card.querySelector(".location")?.textContent.trim() || "";
+      const image = card.querySelector(".deal-media img");
+      const statusText = card.querySelector(".status")?.textContent.trim() || "";
+      const isClosed = card.dataset.status === "closed";
+
+      modalTitle.textContent = title;
+      modalLocation.textContent = location;
+      modalImage.src = image?.getAttribute("src") || "image.jpg";
+      modalImage.alt = image?.getAttribute("alt") || title;
+      modalStatus.classList.toggle("closed", isClosed);
+      const statusIcon = document.createElement("span");
+      const statusLabel = document.createElement("span");
+      statusIcon.className = `status-icon ${isClosed ? "closed" : "open"}`;
+      statusIcon.setAttribute("aria-hidden", "true");
+      statusLabel.textContent = statusText;
+      modalStatus.replaceChildren(statusIcon, statusLabel);
+      modalPrimaryAction.textContent = isClosed ? "Tư vấn deal tương tự" : "Nhận hồ sơ deal";
+      modalPrimaryAction.dataset.leadRole = "Nhà đầu tư cá nhân";
+      modalPrimaryAction.dataset.leadNote = isClosed ? `Muốn tư vấn deal tương tự sau khi xem: ${title}` : `Quan tâm dự án: ${title}`;
+      modalSpecs.replaceChildren();
+
+      card.querySelectorAll(".spec").forEach((spec) => {
+        const label = spec.querySelector(".spec-label")?.textContent.trim() || "";
+        const value = spec.querySelector(".spec-value")?.textContent.trim() || "";
+        const item = document.createElement("div");
+        const labelNode = document.createElement("span");
+        const valueNode = document.createElement("strong");
+
+        item.className = "modal-spec";
+        labelNode.textContent = label;
+        valueNode.textContent = value;
+        item.append(labelNode, valueNode);
+        modalSpecs.appendChild(item);
+      });
+
+      modalNote.textContent = card.querySelector(".deal-note")?.textContent.trim() || "";
+    }
+
+    function openProjectModal(card, opener) {
+      activeDetailButton = opener;
+      fillProjectModal(card);
+      projectModal.hidden = false;
+      document.body.classList.add("modal-open");
+      projectModal.querySelector("[data-modal-close]")?.focus();
+    }
+
+    function closeProjectModal() {
+      if (projectModal.hidden) return;
+      projectModal.hidden = true;
+      document.body.classList.remove("modal-open");
+      activeDetailButton?.focus();
+    }
+
+    detailButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".deal-card");
+        if (card) openProjectModal(card, button);
+      });
+    });
+
+    projectModal?.addEventListener("click", (event) => {
+      if (event.target === projectModal || event.target.closest("[data-modal-close]")) {
+        closeProjectModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeProjectModal();
     });
 
     const capacity = document.querySelector("#capacity");
@@ -1036,10 +1222,28 @@
 
     const leadForm = document.querySelector("#leadForm");
     const formStatus = document.querySelector("#formStatus");
+    const leadRole = document.querySelector("#leadRole");
+    const leadNote = document.querySelector("#leadNote");
     const requiredFields = [
       document.querySelector("#leadName"),
       document.querySelector("#leadPhone")
     ];
+
+    document.querySelectorAll("[data-lead-role]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const role = link.dataset.leadRole;
+        const note = link.dataset.leadNote;
+
+        if (role && leadRole) leadRole.value = role;
+        if (note && leadNote && !leadNote.value.includes(note)) {
+          leadNote.value = leadNote.value.trim() ? `${leadNote.value.trim()}\n${note}` : note;
+        }
+
+        if (link.getAttribute("href") === "#cta") {
+          window.setTimeout(() => document.querySelector("#leadName")?.focus(), 350);
+        }
+      });
+    });
 
     function setInvalid(input, invalid) {
       input.closest(".form-field")?.classList.toggle("is-invalid", invalid);
