@@ -427,9 +427,14 @@
     .form-note { margin-top: 12px; color: var(--muted); font-size: 13px; font-weight: 600; }
     .form-status { min-height: 22px; margin-top: 10px; color: var(--leaf); font-size: 14px; font-weight: 800; }
 
-    .footer { padding: 34px 0 96px; background: #0f1726; color: rgba(255, 255, 255, 0.72); }
-    .footer .wrap { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: center; }
+    .footer { padding: 40px 0 96px; background: #0f1726; color: rgba(255, 255, 255, 0.72); }
+    .footer .wrap { display: grid; grid-template-columns: 160px minmax(0, 1fr) minmax(280px, 0.9fr); gap: 28px; align-items: start; }
     .footer-logo { display: grid; place-items: center; padding: 10px; border-radius: 8px; background: #ffffff; }
+    .footer-title { margin: 0 0 12px; color: #ffffff; font-size: 18px; line-height: 1.3; font-weight: 800; }
+    .footer-info { display: grid; gap: 9px; }
+    .footer-info p { margin: 0; color: rgba(255, 255, 255, 0.82); font-size: 14px; font-weight: 600; }
+    .footer-info span { display: block; margin-bottom: 2px; color: rgba(255, 255, 255, 0.52); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .footer-info a { color: #ffffff; font-weight: 800; }
     .disclaimer { font-size: 13px; font-weight: 600; }
 
     .mobile-cta {
@@ -507,7 +512,7 @@
             <a class="button button-green" href="#risk">Tôi muốn đầu tư</a>
           </div>
           <div class="quick-stats">
-            <div class="stat"><span class="stat-value">0đ CAPEX</span><span class="stat-label">Cho nhà xưởng thuê điện</span></div>
+            <div class="stat"><span class="stat-value">Không cần bỏ vốn</span><span class="stat-label">Nhà xưởng thuê điện mặt trời</span></div>
             <div class="stat"><span class="stat-value">Theo deal</span><span class="stat-label">Không gộp chéo dòng tiền</span></div>
             <div class="stat"><span class="stat-value">Hồ sơ rõ</span><span class="stat-label">Kiểm tra hợp đồng trước khi tham gia</span></div>
           </div>
@@ -544,7 +549,7 @@
             <p>Dùng điện mặt trời ngay trên mái, không phải tự bỏ vốn lắp đặt hệ thống.</p>
             <ul class="mini-list">
               <li><span class="check">✓</span>Giảm chi phí điện ban ngày theo giá thuê đã thỏa thuận</li>
-              <li><span class="check">✓</span>Không cần CAPEX ban đầu cho hệ thống</li>
+              <li><span class="check">✓</span>Không cần bỏ vốn lắp đặt hệ thống ban đầu</li>
               <li><span class="check">✓</span>EPC, vận hành và bảo trì được đưa vào phương án</li>
             </ul>
             <a class="button button-primary" href="#cta">Đăng ký khảo sát nhà xưởng</a>
@@ -894,6 +899,16 @@
       <a class="footer-logo" href="#top" aria-label="Công ty TNHH An Nam Lợi">
         <img src="logo.png" alt="Công ty TNHH An Nam Lợi">
       </a>
+      <div class="footer-company">
+        <h2 class="footer-title">Thông tin công ty</h2>
+        <div class="footer-info">
+          <p><span>Tên công ty</span>Công ty TNHH An Nam Lợi</p>
+          <p><span>Mã số thuế</span>Đang cập nhật</p>
+          <p><span>Địa chỉ</span>Đang cập nhật</p>
+          <p><span>Hotline/Zalo</span><a href="tel:0900000000">0900 000 000</a></p>
+          <p><span>Email</span><a href="mailto:contact@example.com">contact@example.com</a></p>
+        </div>
+      </div>
       <div class="disclaimer">Thông tin trên trang là nội dung giới thiệu mô hình và số liệu minh họa. Dòng tiền thực tế cần căn cứ hợp đồng, sản lượng vận hành, lịch thanh toán, chi phí O&M và hồ sơ pháp lý của từng dự án. Nhà đầu tư nên tự rà soát hồ sơ trước khi tham gia.</div>
     </div>
   </footer>
