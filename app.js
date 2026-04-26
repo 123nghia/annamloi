@@ -140,10 +140,84 @@ function bindLeadForm() {
   });
 }
 
+function bindHeaderState() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const sync = () => {
+    header.classList.toggle("scrolled", window.scrollY > 16);
+  };
+
+  sync();
+  window.addEventListener("scroll", sync, { passive: true });
+}
+
+function bindRevealEffects() {
+  const selectors = [
+    ".section-head",
+    ".trust-item",
+    ".trust-proof-card",
+    ".story-card",
+    ".deal-spotlight-shell",
+    ".deal-card",
+    ".detail-layout > *",
+    ".finance-layout > *",
+    ".dashboard-grid > *",
+    ".flow-steps li",
+    ".wire-panel",
+    ".schema-map",
+    ".schema-card",
+    ".schema-raw",
+    ".copy-grid span",
+    ".lead-copy",
+    ".lead-form",
+    ".footer-main",
+    ".footer-risk"
+  ];
+
+  const seen = new Set();
+  const nodes = [];
+
+  selectors.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((node, index) => {
+      if (seen.has(node)) return;
+      seen.add(node);
+      node.classList.add("reveal");
+      node.style.setProperty("--reveal-index", String(index % 6));
+      nodes.push(node);
+    });
+  });
+
+  if (!nodes.length) return;
+
+  const show = (node) => node.classList.add("is-visible");
+
+  if (!("IntersectionObserver" in window)) {
+    nodes.forEach(show);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      show(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -6% 0px"
+  });
+
+  nodes.forEach((node) => observer.observe(node));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-ready");
   createIcons();
+  bindHeaderState();
   updateCountdowns();
   bindCountUp();
   bindRoiCalculator();
   bindLeadForm();
+  bindRevealEffects();
 });
