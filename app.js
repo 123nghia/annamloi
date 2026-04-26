@@ -109,6 +109,17 @@ function bindCountUp() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
+function getConsultApiUrl() {
+  const { protocol, hostname, port } = window.location;
+  const isLocalHost = hostname === "127.0.0.1" || hostname === "localhost";
+
+  if (isLocalHost && port && port !== "8000") {
+    return `${protocol}//${hostname}:8000/api/consult`;
+  }
+
+  return "/api/consult";
+}
+
 function bindLeadForm() {
   const form = document.querySelector("#leadForm");
   const status = document.querySelector("#formStatus");
@@ -139,7 +150,7 @@ function bindLeadForm() {
     }
 
     try {
-      const response = await fetch("/api/consult", {
+      const response = await fetch(getConsultApiUrl(), {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -157,7 +168,16 @@ function bindLeadForm() {
       status.style.color = "#12805c";
       form.reset();
     } catch (error) {
-      status.textContent = error.message || "Không thể gửi yêu cầu tư vấn.";
+      const isLocalPreview =
+        (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") &&
+        window.location.port !== "8000";
+
+      if (isLocalPreview) {
+        status.textContent = "Chưa chạy server lưu JSON. Hãy chạy `python server.py` rồi gửi lại.";
+      } else {
+        status.textContent = error.message || "Không thể gửi yêu cầu tư vấn.";
+      }
+
       status.style.color = "#b42318";
     } finally {
       if (submitButton) {
