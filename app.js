@@ -112,31 +112,58 @@ function bindCountUp() {
 function bindLeadForm() {
   const form = document.querySelector("#leadForm");
   const status = document.querySelector("#formStatus");
+  const submitButton = form?.querySelector("button[type='submit']");
 
-  form?.addEventListener("submit", (event) => {
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const data = new FormData(form);
-    const name = String(data.get("name") || "").trim();
-    const phone = String(data.get("phone") || "").trim();
 
-    if (!name || !phone) {
+    const data = new FormData(form);
+    const payload = {
+      name: String(data.get("name") || "").trim(),
+      phone: String(data.get("phone") || "").trim(),
+      role: String(data.get("role") || "").trim(),
+      need: String(data.get("need") || "").trim()
+    };
+
+    if (!payload.name || !payload.phone) {
       status.textContent = "Vui lòng nhập họ tên và số điện thoại/Zalo.";
       status.style.color = "#b42318";
       return;
     }
 
-    const lines = [
-      "Đăng ký tư vấn deal điện mặt trời An Nam Lợi",
-      "",
-      `Họ tên: ${name}`,
-      `Điện thoại/Zalo: ${phone}`,
-      `Vai trò: ${data.get("role") || ""}`,
-      `Nhu cầu: ${data.get("need") || ""}`
-    ];
+    status.textContent = "Đang gửi yêu cầu tư vấn...";
+    status.style.color = "#667085";
 
-    status.textContent = "Đã tạo nội dung email tư vấn từ thông tin bạn nhập.";
-    status.style.color = "#12805c";
-    window.location.href = `mailto:contact@annamloi.vn?subject=${encodeURIComponent("Đăng ký tư vấn deal An Nam Lợi")}&body=${encodeURIComponent(lines.join("\n"))}`;
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    try {
+      const response = await fetch("/api/consult", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Không thể lưu yêu cầu tư vấn.");
+      }
+
+      status.textContent = "Đã lưu yêu cầu tư vấn. Đội vận hành sẽ liên hệ lại sớm.";
+      status.style.color = "#12805c";
+      form.reset();
+    } catch (error) {
+      status.textContent = error.message || "Không thể gửi yêu cầu tư vấn.";
+      status.style.color = "#b42318";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 }
 
