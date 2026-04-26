@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="180" y1="100" x2="1420" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF7"/>
+      <stop offset="1" stop-color="#F3F7EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
+  <rect x="226" y="180" width="438" height="528" rx="36" fill="#FFFFFF" stroke="#E4E8DA" stroke-width="6"/>
+  <rect x="286" y="262" width="176" height="20" rx="10" fill="#D89418" fill-opacity=".2"/>
+  <rect x="286" y="316" width="312" height="28" rx="14" fill="#1B2332"/>
+  <rect x="286" y="370" width="250" height="18" rx="9" fill="#8A97A8"/>
+  <rect x="286" y="420" width="300" height="18" rx="9" fill="#8A97A8"/>
+  <circle cx="328" cy="500" r="20" fill="#12805C" fill-opacity=".16"/>
+  <path d="M318 501L327 510L341 490" stroke="#12805C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="364" y="490" width="198" height="18" rx="9" fill="#1B2332"/>
+  <circle cx="328" cy="562" r="20" fill="#12805C" fill-opacity=".16"/>
+  <path d="M318 563L327 572L341 552" stroke="#12805C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="364" y="552" width="174" height="18" rx="9" fill="#1B2332"/>
+  <circle cx="328" cy="624" r="20" fill="#12805C" fill-opacity=".16"/>
+  <path d="M318 625L327 634L341 614" stroke="#12805C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="364" y="614" width="222" height="18" rx="9" fill="#1B2332"/>
+  <path d="M910 236H1206C1248 236 1282 270 1282 312V648C1282 690 1248 724 1206 724H910C868 724 834 690 834 648V312C834 270 868 236 910 236Z" fill="#FFFFFF" stroke="#E4E8DA" stroke-width="6"/>
+  <path d="M1058 294L1166 334V432C1166 520 1102 580 1058 594C1014 580 950 520 950 432V334L1058 294Z" fill="#12805C" fill-opacity=".16" stroke="#12805C" stroke-width="8"/>
+  <path d="M1004 442L1040 478L1114 382" stroke="#12805C" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="922" y="760" width="272" height="44" rx="22" fill="#D89418" fill-opacity=".16"/>
+  <rect x="968" y="774" width="180" height="16" rx="8" fill="#D89418"/>
+</svg>

@@ -1,0 +1,483 @@
+.admin-login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(circle at top left, rgba(18, 128, 92, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(216, 148, 24, 0.16), transparent 28%),
+    #f4f7f5;
+}
+
+.admin-login-card,
+.admin-section-card,
+.admin-user-card,
+.admin-consult-card {
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.08);
+}
+
+.admin-login-card {
+  width: min(520px, 100%);
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+}
+
+.admin-login-copy h1 {
+  max-width: none;
+  margin-bottom: 12px;
+  font-size: clamp(36px, 5vw, 48px);
+}
+
+.admin-login-copy p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.admin-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(18, 128, 92, 0.08);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  background:
+    linear-gradient(180deg, rgba(228, 244, 236, 0.82) 0%, rgba(244, 247, 245, 0.96) 18%, #f7faf8 100%);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+  background: rgba(247, 250, 248, 0.86);
+  backdrop-filter: blur(18px);
+  border-right: 1px solid rgba(17, 24, 39, 0.07);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-brand img {
+  width: 82px;
+}
+
+.admin-brand strong,
+.admin-user-card strong,
+.admin-consult-head strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.admin-brand span,
+.admin-user-card small,
+.admin-consult-head span,
+.admin-consult-meta span {
+  color: var(--muted);
+}
+
+.admin-user-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.admin-user-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.admin-tabs {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-tabs button {
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(17, 24, 39, 0.07);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--ink);
+  text-align: left;
+  font-weight: 760;
+}
+
+.admin-tabs button.is-active {
+  border-color: rgba(18, 128, 92, 0.24);
+  background: rgba(18, 128, 92, 0.08);
+  color: var(--green);
+  box-shadow: 0 16px 30px rgba(18, 128, 92, 0.08);
+}
+
+.admin-sidebar-actions {
+  align-content: end;
+  display: grid;
+  gap: 10px;
+}
+
+.admin-main {
+  min-width: 0;
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.admin-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-toolbar h1 {
+  max-width: none;
+  margin-bottom: 10px;
+  font-size: clamp(36px, 4vw, 52px);
+}
+
+.admin-toolbar p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.admin-content-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.admin-section-card {
+  padding: 22px;
+}
+
+.admin-section-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-section-kicker {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.admin-section-head h2 {
+  max-width: none;
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+.admin-section-body,
+.admin-field-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-section-body {
+  grid-template-columns: 1fr;
+}
+
+.admin-field-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-field,
+.admin-security-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-field span,
+.admin-security-form span,
+.admin-login-card label {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.admin-field small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-input,
+.admin-textarea,
+.admin-login-card input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.admin-textarea {
+  min-height: 120px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.admin-input:focus,
+.admin-textarea:focus,
+.admin-login-card input:focus {
+  outline: none;
+  border-color: rgba(18, 128, 92, 0.36);
+  box-shadow: 0 0 0 4px rgba(18, 128, 92, 0.1);
+}
+
+.admin-field-group,
+.admin-array {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-field-head p,
+.admin-array-head p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-array-head,
+.admin-array-card-head,
+.admin-consult-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-array-list,
+.admin-consult-list {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-array-card {
+  padding: 16px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  background: rgba(246, 249, 247, 0.88);
+}
+
+.admin-array-card-actions,
+.admin-consult-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-mini-button,
+.admin-icon-button,
+.admin-consult-actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--ink);
+  font-weight: 720;
+}
+
+.admin-mini-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-icon-button.is-danger {
+  color: var(--danger);
+  border-color: rgba(180, 35, 24, 0.16);
+}
+
+.admin-image-field {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-image-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-upload-button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: rgba(18, 128, 92, 0.1);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-image-preview {
+  width: 112px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.admin-form-message {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 760;
+}
+
+.admin-form-message.is-success {
+  color: var(--green);
+}
+
+.admin-form-message.is-error {
+  color: var(--danger);
+}
+
+.admin-form-message.is-neutral {
+  color: var(--muted);
+}
+
+.admin-consult-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.admin-consult-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-consult-card p {
+  margin: 0;
+  color: var(--text);
+}
+
+.admin-status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.admin-status-pill.is-new {
+  background: rgba(23, 105, 170, 0.1);
+  color: var(--blue);
+}
+
+.admin-status-pill.is-contacted {
+  background: rgba(216, 148, 24, 0.12);
+  color: var(--amber);
+}
+
+.admin-status-pill.is-closed {
+  background: rgba(18, 128, 92, 0.1);
+  color: var(--green);
+}
+
+.admin-empty-state {
+  margin: 0;
+  color: var(--muted);
+}
+
+.admin-security-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.admin-user-card-large {
+  align-content: start;
+}
+
+.admin-security-form {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 1180px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: static;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-toolbar,
+  .admin-section-head,
+  .admin-array-head,
+  .admin-consult-head {
+    display: block;
+  }
+
+  .admin-toolbar .button,
+  .admin-array-head .admin-mini-button {
+    margin-top: 12px;
+  }
+
+  .admin-field-grid,
+  .admin-security-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .admin-main,
+  .admin-sidebar {
+    padding: 18px 14px;
+  }
+
+  .admin-login-card,
+  .admin-section-card,
+  .admin-user-card,
+  .admin-consult-card {
+    border-radius: 16px;
+  }
+
+  .admin-toolbar h1 {
+    font-size: 32px;
+  }
+}

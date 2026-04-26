@@ -1,6 +1,10 @@
 node_modules/
+.next/
+.tools/
 .env
 local.db
 local.db-*
 .vercel/
 data/*.json
+public/uploads/*
+!public/uploads/.gitkeep
