@@ -74,30 +74,38 @@ export const contentSchema: ContentSectionSchema[] = [
   },
   {
     id: "site",
-    title: "Header & thương hiệu",
-    description: "Logo, menu điều hướng và nút tư vấn trên header.",
+    title: "Thuong hieu",
+    description: "Ten thuong hieu va logo hien thi tren header.",
     fields: [
-      { key: "site.brandName", label: "Tên thương hiệu", type: "text" },
-      { key: "site.logoUrl", label: "Logo", type: "image", folder: "brand" },
+      { key: "site.brandName", label: "Ten thuong hieu", type: "text" },
+      { key: "site.logoUrl", label: "Logo", type: "image", folder: "brand" }
+    ]
+  },
+  {
+    id: "site-nav",
+    title: "Menu header",
+    description: "Chinh cac muc menu tren thanh dau trang, thu tu hien thi va nut tu van ben phai.",
+    fields: [
       {
         key: "site.navLinks",
-        label: "Menu điều hướng",
+        label: "Menu dieu huong",
         type: "array",
-        itemLabel: "Mục menu",
+        itemLabel: "Muc menu",
         of: "group",
         defaultItem: { label: "Menu", href: "#top" },
         fields: [
-          { key: "label", label: "Nhãn", type: "text" },
-          { key: "href", label: "Liên kết", type: "text" }
+          { key: "label", label: "Ten menu", type: "text" },
+          { key: "href", label: "Link den section", type: "text" }
         ]
       },
       {
         key: "site.supportButton",
-        label: "Nút tư vấn",
+        label: "Nut tu van",
         type: "group",
+        description: "Nut o goc phai header.",
         fields: [
-          { key: "label", label: "Nhãn", type: "text" },
-          { key: "href", label: "Liên kết", type: "text" }
+          { key: "label", label: "Ten nut", type: "text" },
+          { key: "href", label: "Link", type: "text" }
         ]
       }
     ]
