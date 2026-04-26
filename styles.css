@@ -517,23 +517,73 @@ h3 {
 }
 
 .section-head {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
   align-items: end;
-  justify-content: space-between;
-  gap: 28px;
-  margin-bottom: 28px;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-.section-head p:not(.kicker) {
-  max-width: 470px;
+.section-heading {
+  min-width: 0;
+}
+
+.section-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.section-kicker-row .kicker {
   margin-bottom: 0;
-  color: var(--muted);
-  font-weight: 560;
+}
+
+.section-index {
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(18, 128, 92, 0.18);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(18, 128, 92, 0.12), rgba(23, 105, 170, 0.10));
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-summary {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 247, 244, 0.94));
+  box-shadow: var(--shadow-soft);
+}
+
+.section-summary strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.section-summary p {
+  margin: 0;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .section-head.narrow {
-  display: block;
-  max-width: 780px;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 820px;
 }
 
 .deal-grid {
@@ -1394,6 +1444,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .section-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   .hero-media {
     min-height: 0;
   }
@@ -1596,6 +1651,15 @@ h3 {
 
   .section-head {
     display: block;
+  }
+
+  .section-kicker-row {
+    margin-bottom: 14px;
+  }
+
+  .section-summary {
+    margin-top: 18px;
+    padding: 16px;
   }
 
   .deal-card {

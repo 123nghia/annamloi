@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://annamloi.vn/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#f7faf8">
-  <link rel="preload" as="image" href="image.jpg">
+  <link rel="preload" as="image" href="assets/hero-solar.svg">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -85,7 +85,7 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <img src="image.jpg" alt="">
+        <img src="assets/hero-solar.svg" alt="">
       </div>
       <div class="hero-copy">
         <div class="hero-icon" aria-hidden="true">
@@ -153,13 +153,21 @@
 
     <section class="section visual-story" aria-labelledby="visual-story-title">
       <div class="section-head">
-        <p class="kicker">Hình ảnh & niềm tin</p>
-        <h2 id="visual-story-title">NĐT nhìn thấy tài sản, hồ sơ và tiền về ngay trên một luồng</h2>
-        <p>Thay vì chỉ nói ROI, giao diện luôn đưa ảnh hệ thống, trạng thái pháp lý và dòng tiền vào cùng một cảnh nhìn.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">01</span>
+            <p class="kicker">Kiểm chứng deal</p>
+          </div>
+          <h2 id="visual-story-title">Kiểm tra ảnh tài sản, hồ sơ pháp lý và lịch tiền về trước khi quyết định</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>3 tín hiệu niềm tin đặt cạnh nhau: ảnh hệ thống, checklist pháp lý và dòng tiền mẫu.</p>
+        </div>
       </div>
       <div class="story-grid">
         <article class="story-card story-card-large">
-          <img src="image.jpg" alt="Hệ thống điện mặt trời áp mái nhà xưởng">
+          <img src="assets/story-asset.svg" alt="Hệ thống điện mặt trời áp mái nhà xưởng">
           <div class="story-content">
             <span class="story-tag">Tài sản thật</span>
             <h3>500kWp trên mái nhà xưởng Bình Dương</h3>
@@ -167,7 +175,7 @@
           </div>
         </article>
         <article class="story-card">
-          <img src="image.jpg" alt="Hồ sơ và checklist nghiệm thu deal điện mặt trời">
+          <img src="assets/story-legal.svg" alt="Hồ sơ và checklist nghiệm thu deal điện mặt trời">
           <div class="story-content">
             <span class="story-tag">Pháp lý</span>
             <h3>Checklist trước tiền</h3>
@@ -175,7 +183,7 @@
           </div>
         </article>
         <article class="story-card">
-          <img src="image.jpg" alt="Dashboard dòng tiền và lịch chi trả hàng tháng">
+          <img src="assets/story-cashflow.svg" alt="Dashboard dòng tiền và lịch chi trả hàng tháng">
           <div class="story-content">
             <span class="story-tag">Dòng tiền</span>
             <h3>Chi trả theo tháng</h3>
@@ -187,14 +195,22 @@
 
     <section class="section" id="deals">
       <div class="section-head">
-        <p class="kicker">List deal</p>
-        <h2>Chọn phần sở hữu từ 100kWp, theo dõi % fill và countdown</h2>
-        <p>Card deal ưu tiên 4 thông tin quyết định: tổng kWp, ROI mục tiêu, phần còn lại và thời gian huy động.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">02</span>
+            <p class="kicker">Danh sách deal đang mở</p>
+          </div>
+          <h2>So sánh deal theo kWp, ROI mục tiêu, phần còn lại và hạn đóng vốn</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Danh sách để lướt nhanh và biết ngay deal nào còn chỗ, deal nào sắp mở, deal nào đã vận hành.</p>
+        </div>
       </div>
       <div class="deal-grid">
         <article class="deal-card featured">
           <div class="deal-image">
-            <img src="image.jpg" alt="Nhà xưởng có hệ thống điện mặt trời áp mái">
+            <img src="assets/deal-open.svg" alt="Nhà xưởng có hệ thống điện mặt trời áp mái">
             <span class="badge live"><i data-lucide="radio" aria-hidden="true"></i> Đang mở</span>
           </div>
           <div class="deal-body">
@@ -223,7 +239,7 @@
 
         <article class="deal-card">
           <div class="deal-image crop-top">
-            <img src="image.jpg" alt="Hồ sơ dự án điện mặt trời áp mái">
+            <img src="assets/deal-review.svg" alt="Hồ sơ dự án điện mặt trời áp mái">
             <span class="badge"><i data-lucide="clock-3" aria-hidden="true"></i> Sắp mở</span>
           </div>
           <div class="deal-body">
@@ -252,7 +268,7 @@
 
         <article class="deal-card">
           <div class="deal-image crop-bottom">
-            <img src="image.jpg" alt="Dashboard vận hành hệ thống điện mặt trời">
+            <img src="assets/deal-operating.svg" alt="Dashboard vận hành hệ thống điện mặt trời">
             <span class="badge closed"><i data-lucide="check-circle-2" aria-hidden="true"></i> Đã đóng</span>
           </div>
           <div class="deal-body">
@@ -283,14 +299,22 @@
 
     <section class="section split" id="deal-detail">
       <div class="section-head narrow">
-        <p class="kicker">Deal detail</p>
-        <h2>Trang chi tiết giúp NĐT nắm tài sản trước khi nắm lợi nhuận</h2>
-        <p>CTA chính không nói chung chung: luôn hiển thị phần còn lại, kWp tối thiểu và trạng thái pháp lý.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">03</span>
+            <p class="kicker">Chi tiết một deal</p>
+          </div>
+          <h2>Đi sâu vào một deal cụ thể: tài sản, vị trí, tỷ lệ sở hữu và hồ sơ trước khi giữ chỗ</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Một deal duy nhất với ảnh tài sản, chỉ số sở hữu và checklist pháp lý ngay cạnh CTA.</p>
+        </div>
       </div>
       <div class="detail-layout">
         <div class="asset-panel" id="asset">
           <div class="panel-image">
-            <img src="image.jpg" alt="Ảnh dự án điện mặt trời áp mái nhà xưởng">
+            <img src="assets/detail-asset.svg" alt="Ảnh dự án điện mặt trời áp mái nhà xưởng">
           </div>
           <div class="asset-grid">
             <div>
@@ -336,9 +360,17 @@
 
     <section class="section finance" id="cashflow">
       <div class="section-head">
-        <p class="kicker">Nắm lợi nhuận</p>
-        <h2>Minh bạch dòng tiền tháng, ROI, lịch chi trả và lịch sử thanh toán</h2>
-        <p>Module này nên xuất hiện ngay trong deal detail và dashboard sau khi booking thành công.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">04</span>
+            <p class="kicker">Mô phỏng dòng tiền</p>
+          </div>
+          <h2>Ước tính số vốn, lợi nhuận tháng và lịch chi trả cho phần kWp muốn booking</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Phần này trả lời rất thẳng: đầu tư bao nhiêu tiền, lợi nhuận tháng ra sao và nhận tiền khi nào.</p>
+        </div>
       </div>
       <div class="finance-layout">
         <form class="calc" id="roiForm">
@@ -381,9 +413,17 @@
 
     <section class="section dashboard" id="dashboard">
       <div class="section-head">
-        <p class="kicker">Dashboard sau booking</p>
-        <h2>Một màn hình để nắm tài sản, trạng thái và tiền về</h2>
-        <p>Thiết kế mobile-first: số quan trọng ở trên, hồ sơ và lịch sử nằm dưới dạng tab/section.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">05</span>
+            <p class="kicker">Dashboard sau booking</p>
+          </div>
+          <h2>Theo dõi phần sở hữu, trạng thái vận hành, hợp đồng và dòng tiền sau khi tham gia</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Màn dành cho nhà đầu tư đã vào deal: xem tài sản đang chạy ra sao và tiền đã về chưa.</p>
+        </div>
       </div>
       <div class="dashboard-grid">
         <article class="phone-frame" aria-label="Mobile dashboard wireframe">
@@ -454,9 +494,17 @@
 
     <section class="section flow" id="flow">
       <div class="section-head">
-        <p class="kicker">UX flow</p>
-        <h2>Luồng đơn giản, ít bước, luôn biết “tôi đang ở đâu”</h2>
-        <p>Funnel đi từ niềm tin → quyết định → booking → theo dõi dòng tiền.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">06</span>
+            <p class="kicker">Bản đồ hành trình</p>
+          </div>
+          <h2>Luồng từ landing đến booking và theo dõi lợi nhuận được trình bày theo từng bước</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Toàn bộ funnel từ tạo niềm tin, chọn deal, KYC, booking đến dashboard sau đầu tư.</p>
+        </div>
       </div>
       <ol class="flow-steps">
         <li><span>01</span><strong>Landing</strong><em>ROI + pháp lý + trust</em></li>
@@ -472,15 +520,23 @@
 
     <section class="section wireframe" id="wireframe">
       <div class="section-head">
-        <p class="kicker">Wireframe Figma-ready</p>
-        <h2>Frame rõ để designer kéo nhanh sang Figma</h2>
-        <p>Component nên đặt tên theo block: Hero, DealCard, DealDetail, InvestorDashboard, AdminDeals.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">07</span>
+            <p class="kicker">Bản dựng màn hình</p>
+          </div>
+          <h2>Khung giao diện để designer hoặc dev triển khai nhanh từng màn chính</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Wireframe cho home, deal detail, dashboard và admin để đội thiết kế triển khai nhanh sang Figma.</p>
+        </div>
       </div>
       <div class="wire-grid">
         <article>
           <h3>Home / Mobile 390</h3>
           <figure class="wire-thumb">
-            <img src="image.jpg" alt="Ảnh minh họa hero mobile">
+            <img src="assets/hero-solar.svg" alt="Ảnh minh họa hero mobile">
           </figure>
           <div class="wire-box">
             <span class="wire-nav"></span>
@@ -494,7 +550,7 @@
         <article>
           <h3>Deal Detail / Mobile</h3>
           <figure class="wire-thumb">
-            <img src="image.jpg" alt="Ảnh minh họa chi tiết tài sản">
+            <img src="assets/detail-asset.svg" alt="Ảnh minh họa chi tiết tài sản">
           </figure>
           <div class="wire-box">
             <span class="wire-image"></span>
@@ -507,7 +563,7 @@
         <article>
           <h3>Dashboard / Mobile</h3>
           <figure class="wire-thumb">
-            <img src="image.jpg" alt="Ảnh minh họa dashboard tài sản">
+            <img src="assets/deal-operating.svg" alt="Ảnh minh họa dashboard tài sản">
           </figure>
           <div class="wire-box">
             <span class="wire-hero compact"></span>
@@ -519,7 +575,7 @@
         <article>
           <h3>Admin / Desktop</h3>
           <figure class="wire-thumb">
-            <img src="image.jpg" alt="Ảnh minh họa admin deal">
+            <img src="assets/wire-admin.svg" alt="Ảnh minh họa admin deal">
           </figure>
           <div class="wire-box desktop-wire">
             <span class="wire-nav"></span>
@@ -533,9 +589,17 @@
 
     <section class="section schema" id="schema">
       <div class="section-head">
-        <p class="kicker">Database min</p>
-        <h2>Schema SQL đủ cho MVP: Users, Deals, Investments, Contracts, Payments</h2>
-        <p>Thiết kế giữ mỗi deal độc lập, ownership_ratio được tính và lưu tại thời điểm chốt deal.</p>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">08</span>
+            <p class="kicker">Mô hình dữ liệu MVP</p>
+          </div>
+          <h2>Schema SQL cho users, deals, investments, contracts và payments chạy độc lập theo từng deal</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Phần dành cho dev/back-end, giải thích cấu trúc dữ liệu tối thiểu để MVP vận hành được.</p>
+        </div>
       </div>
       <pre><code>CREATE TABLE users (
   id BIGSERIAL PRIMARY KEY,
@@ -601,8 +665,17 @@ CREATE TABLE payments (
 
     <section class="section cta-copy">
       <div class="section-head">
-        <p class="kicker">CTA content</p>
-        <h2>Thông điệp chuyển đổi ngắn, bám số còn lại và niềm tin pháp lý</h2>
+        <div class="section-heading">
+          <div class="section-kicker-row">
+            <span class="section-index">09</span>
+            <p class="kicker">Cụm CTA chuyển đổi</p>
+          </div>
+          <h2>Thông điệp ngắn để chốt hành động dựa trên số còn lại và niềm tin pháp lý</h2>
+        </div>
+        <div class="section-summary">
+          <strong>Người dùng thấy gì ở đây?</strong>
+          <p>Các câu CTA mẫu để đặt ở card deal, deal detail, form tư vấn và dashboard.</p>
+        </div>
       </div>
       <div class="copy-grid">
         <span>2%/tháng* - tài sản thật, có hợp đồng</span>
@@ -617,10 +690,10 @@ CREATE TABLE payments (
     <section class="lead-section" id="lead">
       <div class="lead-copy">
         <p class="kicker">Đăng ký quan tâm</p>
-        <h2>Nhận deal phù hợp với số kWp bạn muốn sở hữu</h2>
-        <p>Form chỉ lấy dữ liệu tối thiểu để đội vận hành gọi lại, xác nhận vai trò, hướng dẫn KYC và gửi hồ sơ deal phù hợp.</p>
+        <h2>Nhận deal phù hợp, hướng dẫn KYC và bộ hồ sơ đúng với mức kWp bạn muốn sở hữu</h2>
+        <p>Đây là nơi để lại nhu cầu. Đội vận hành sẽ gọi lại, xác nhận vai trò và gửi đúng hồ sơ deal liên quan.</p>
         <div class="lead-photo">
-          <img src="image.jpg" alt="Hệ thống điện mặt trời trên mái nhà xưởng">
+          <img src="assets/lead-consult.svg" alt="Tư vấn deal điện mặt trời cho nhà đầu tư">
         </div>
       </div>
       <form class="lead-form" id="leadForm">
