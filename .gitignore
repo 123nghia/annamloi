@@ -8,3 +8,5 @@ local.db-*
 data/*.json
 public/uploads/*
 !public/uploads/.gitkeep
+
+.vercel
