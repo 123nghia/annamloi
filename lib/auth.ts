@@ -107,7 +107,13 @@ export async function authenticateAdmin(email: string, password: string) {
   const updatedUsers = users.map((item) =>
     item.id === admin.id ? { ...item, lastLoginAt: new Date().toISOString() } : item
   );
-  await saveAdminUsers(updatedUsers);
+
+  try {
+    await saveAdminUsers(updatedUsers);
+  } catch {
+    // On Vercel without KV configured, login should still work even if lastLoginAt cannot persist.
+  }
+
   return admin;
 }
 

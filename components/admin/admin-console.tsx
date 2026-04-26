@@ -457,7 +457,16 @@ export function AdminConsole({ initialContent, consults, admin, storageMode }: A
           <span className="admin-chip">Đang đăng nhập</span>
           <strong>{admin.name}</strong>
           <small>{admin.email}</small>
-          <small>Storage: {storageMode === "redis" ? "Vercel Redis" : "Local JSON"}</small>
+          <small>
+            Storage:{" "}
+            {storageMode === "redis"
+              ? "Vercel Redis"
+              : storageMode === "blob"
+                ? "Vercel Blob"
+                : storageMode === "vercel-storage-required"
+                  ? "Can cau hinh Vercel KV/Blob"
+                  : "Local JSON"}
+          </small>
         </div>
 
         <nav className="admin-tabs" aria-label="Admin tabs">

@@ -18,14 +18,17 @@ export async function PATCH(
     const status = payload.status;
 
     if (!status || !["new", "contacted", "closed"].includes(status)) {
-      return NextResponse.json({ ok: false, error: "Trạng thái không hợp lệ." }, { status: 400 });
+      return NextResponse.json({ ok: false, error: "Trang thai khong hop le." }, { status: 400 });
     }
 
     await updateConsultStatus(id, status);
-    return NextResponse.json({ ok: true, message: "Đã cập nhật trạng thái lead." });
-  } catch {
+    return NextResponse.json({ ok: true, message: "Da cap nhat trang thai lead." });
+  } catch (error) {
     return NextResponse.json(
-      { ok: false, error: "Không thể cập nhật trạng thái lead." },
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Khong the cap nhat trang thai lead."
+      },
       { status: 500 }
     );
   }

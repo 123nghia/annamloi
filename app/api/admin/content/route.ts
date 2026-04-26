@@ -22,8 +22,14 @@ export async function PUT(request: NextRequest) {
   try {
     const payload = (await request.json()) as SiteContent;
     await saveSiteContent(payload);
-    return NextResponse.json({ ok: true, message: "Đã lưu nội dung landing page." });
-  } catch {
-    return NextResponse.json({ ok: false, error: "Không thể lưu nội dung." }, { status: 500 });
+    return NextResponse.json({ ok: true, message: "Da luu noi dung landing page." });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Khong the luu noi dung."
+      },
+      { status: 500 }
+    );
   }
 }

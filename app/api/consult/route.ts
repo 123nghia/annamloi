@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     if (!name || !phone) {
       return NextResponse.json(
-        { ok: false, error: "Vui lòng nhập họ tên và số điện thoại/Zalo." },
+        { ok: false, error: "Vui long nhap ho ten va so dien thoai/Zalo." },
         { status: 400 }
       );
     }
@@ -33,11 +33,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       ok: true,
       id: entry.id,
-      message: "Đã lưu yêu cầu tư vấn. Đội vận hành sẽ liên hệ lại sớm."
+      message: "Da luu yeu cau tu van. Doi van hanh se lien he lai som."
     });
-  } catch {
+  } catch (error) {
     return NextResponse.json(
-      { ok: false, error: "Không thể lưu yêu cầu tư vấn." },
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Khong the luu yeu cau tu van."
+      },
       { status: 500 }
     );
   }

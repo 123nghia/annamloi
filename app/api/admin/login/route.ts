@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
 
     if (!email || !password) {
       return NextResponse.json(
-        { ok: false, error: "Vui lòng nhập email và mật khẩu." },
+        { ok: false, error: "Vui long nhap email va mat khau." },
         { status: 400 }
       );
     }
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const admin = await authenticateAdmin(email, password);
     if (!admin) {
       return NextResponse.json(
-        { ok: false, error: "Thông tin đăng nhập không đúng." },
+        { ok: false, error: "Thong tin dang nhap khong dung." },
         { status: 401 }
       );
     }
@@ -32,7 +32,14 @@ export async function POST(request: NextRequest) {
     const cookie = buildSessionCookie(createSessionToken({ email: admin.email, name: admin.name }));
     response.cookies.set(cookie.name, cookie.value, cookie.options);
     return response;
-  } catch {
-    return NextResponse.json({ ok: false, error: "Không thể đăng nhập." }, { status: 500 });
+  } catch (error) {
+    console.error("admin-login-error", error);
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Khong the dang nhap."
+      },
+      { status: 500 }
+    );
   }
 }

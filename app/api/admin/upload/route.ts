@@ -32,15 +32,18 @@ export async function POST(request: NextRequest) {
     const file = data.get("file");
 
     if (!(file instanceof File)) {
-      return NextResponse.json({ ok: false, error: "Thiếu file upload." }, { status: 400 });
+      return NextResponse.json({ ok: false, error: "Thieu file upload." }, { status: 400 });
     }
 
     const extension = getExtension(file.name, file.type);
     const safeBase = slugifyName(file.name.replace(path.extname(file.name), "")) || "upload";
     const pathname = `${folder}/${Date.now()}-${safeBase}${extension}`;
+    const publicMediaToken =
+      process.env.PUBLIC_MEDIA_READ_WRITE_TOKEN || process.env.BLOB_READ_WRITE_TOKEN;
 
-    if (process.env.BLOB_READ_WRITE_TOKEN) {
+    if (publicMediaToken) {
       const blob = await put(pathname, file, {
+        token: publicMediaToken,
         access: "public",
         addRandomSuffix: false
       });
@@ -51,7 +54,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           ok: false,
-          error: "Thiếu Blob storage trên Vercel. Hãy cấu hình BLOB_READ_WRITE_TOKEN để upload ảnh."
+          error:
+            "Thieu public Blob token tren Vercel. Hay cau hinh PUBLIC_MEDIA_READ_WRITE_TOKEN de upload anh."
         },
         { status: 500 }
       );
@@ -67,7 +71,13 @@ export async function POST(request: NextRequest) {
       ok: true,
       url: `/uploads/${folder}/${path.basename(pathname)}`
     });
-  } catch {
-    return NextResponse.json({ ok: false, error: "Không thể upload ảnh." }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Khong the upload anh."
+      },
+      { status: 500 }
+    );
   }
 }
