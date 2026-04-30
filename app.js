@@ -1,5 +1,9 @@
 const currency = new Intl.NumberFormat("vi-VN");
 
+if (document.body) {
+  document.body.classList.add("js-enabled");
+}
+
 function createIcons() {
   if (window.lucide) {
     window.lucide.createIcons();
